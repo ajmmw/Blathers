@@ -1,0 +1,21 @@
+{
+  "name": "LLoid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "dependencies": {
+    "better-sqlite3": "^6.0.1",
+    "dblapi.js": "^2.4.0",
+    "discord.js": "^12.1.1",
+    "enmap": "^5.2.4",
+    "fetch": "^1.1.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

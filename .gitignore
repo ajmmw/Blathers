@@ -8,5 +8,4 @@ users.sqlite
 users.sqlite-wal
 users.sqlite-shm
 database.sqlite
-package.json
 package-lock.json
