@@ -7,6 +7,7 @@ It can also store and display your islands Turnip Prices to be easly displayed a
 Some features may not be avalible yet as bot is still under heavy construction.
 ### Commands
 * ;lookup - Search the Museum database for a particular item/animal. EG: ;lookup fish Carp or ;lookup fish Great White Shark
+* ;fc - Share your Nintendo Switch Friend Code.
 * ;info - Display information about bot.
 * ;points - Check your current points earned.
 * ;q - Shows a random Trivia Question.
