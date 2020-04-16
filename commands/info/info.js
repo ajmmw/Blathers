@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     const embed = new Discord.MessageEmbed()
         .addField(`Version`, `${client.version}`, true)
         .addField(`Library`, `[discord.js](https://discord.js.org/#/)`, true)
-        .addField(`Node JS`, `{v12.16.2}`, true)
+        .addField(`Node JS`, `v12.16.2`, true)
         .addField(`Servers`, `${client.guilds.cache.size}`, true)
         .addField(`Users`, `${client.users.cache.size}`, true)
         .addField(`Invite`, `[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=387072&scope=bot)`, true)

@@ -72,7 +72,7 @@ exports.run = async (client, message, args) => {
                     .setColor(getRandomColor());
                   message.channel.send(embed).catch(error => { console.error('Q LEVEL COMMANMD', error); });
                 }
-                client.setScore.run(score);
+                return client.setScore.run(score);
               })
               .catch(() => {
                 sentTrivia.delete(message.guild.id);
