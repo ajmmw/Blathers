@@ -11,4 +11,12 @@ exports.run = (client, message, args) => {
         .addField(`;q`, `Generate a random Trivia Question.`)
         .setColor(0xFF0092);
     message.author.send(embed).catch(() => { return });
-}
+};
+
+module.exports.help = {
+    name: 'help',
+    category: 'info',
+    description: 'Sends a DM with the current bot commands.',
+    usage: ';help',
+    aliases: [],
+};

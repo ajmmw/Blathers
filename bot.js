@@ -3,6 +3,8 @@ global.Discord = require("discord.js");
 const client = new Discord.Client();
 
 // Get Config
+const { version } = require('./package.json');
+client.version = `v${version}`;
 const config = require("./config.json");
 client.config = config;
 
@@ -18,6 +20,9 @@ global.DataSQL = new SQLite('./database.sqlite');
 const DBL = require("dblapi.js");
 const dbl = new DBL(config.dbl.token, { webhookPort: 5000, webhookAuth: config.dbl.auth }, client);
 
+// Get Functions
+require('./src/functions')(client);
+
 
 // Commands Load
 const fs = require("fs");
@@ -32,15 +37,33 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.commands = new Enmap();
+client.aliases = new Enmap();
 
-fs.readdir("./commands/", (err, files) => {
-    if (err) return console.error(err);
-    files.forEach(file => {
-        if (!file.endsWith(".js")) return;
-        let commandName = file.split(".")[0];
-        let props = require(`./commands/${file}`);
-        client.commands.set(commandName, props);
-    });
+fs.readdir('./commands/', (err, folders) => {
+    if (err) { return console.error(err); }
+
+    for (let i = 0; i < folders.length; i++) {
+        fs.readdir(`./commands/${folders[i]}/`, (error, files) => {
+            if (error) {
+                return console.error(error);
+            }
+            files.forEach((file) => {
+                if (!file.endsWith('.js')) { return; }
+
+                const props = require(`./commands/${folders[i]}/${file}`);
+                const commandName = props.help.name;
+
+                console.log(`Attempting to load command ${commandName}`);
+                client.commands.set(commandName, props);
+
+                if (props.help.aliases) {
+                    props.help.aliases.forEach((alias) => {
+                        client.aliases.set(alias, commandName);
+                    });
+                }
+            });
+        });
+    }
 });
 
 global.sentTrivia = new Set();

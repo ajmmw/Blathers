@@ -1,12 +1,4 @@
 exports.run = (client, message, args) => {
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '0x';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
     let [table, item1, item2, item3] = args;
     if (!table || !item1) return;
     if (item3) {
@@ -35,7 +27,7 @@ exports.run = (client, message, args) => {
                 .addField(`Avalible (Northern Hemisphere)`, `${Fish.nh}`, false)
                 .addField(`Avalible (Southern Hemisphere)`, `${Fish.sh}`, false)
                 .setThumbnail(Fish.image)
-                .setColor(getRandomColor());
+                .setColor(client.getRandomColor());
         return message.channel.send(embed).catch(error => { console.error('LOOKUP COMMANMD', error); });
     }
 
@@ -57,7 +49,15 @@ exports.run = (client, message, args) => {
                 .addField(`Avalible (Northern Hemisphere)`, `${Bug.nh}`, false)
                 .addField(`Avalible (Southern Hemisphere)`, `${Bug.sh}`, false)
                 .setThumbnail(Bug.image)
-                .setColor(getRandomColor());
+                .setColor(client.getRandomColor());
         return message.channel.send(embed).catch(error => { console.error('LOOKUP COMMANMD', error); });
     }
-}
+};
+
+module.exports.help = {
+    name: 'lookup',
+    category: 'misc',
+    description: 'Lookup a certain fish/bug from the Museum',
+    usage: ';lookup',
+    aliases: ['search'],
+};

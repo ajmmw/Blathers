@@ -65,14 +65,6 @@ exports.run = async (client, message, args) => {
                 score.points += points;
                 const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
                 if (score.level < curLevel) {
-                  function getRandomColor() {
-                    var letters = '0123456789ABCDEF';
-                    var color = '0x';
-                    for (var i = 0; i < 6; i++) {
-                      color += letters[Math.floor(Math.random() * 16)];
-                    }
-                    return color;
-                  }
                   score.level++;
                   embed = new Discord.MessageEmbed()
                     .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
@@ -97,4 +89,12 @@ exports.run = async (client, message, args) => {
       })
   } else
     client.channels.cache.get(message.channel.id).send(`A question has already been asked.`).catch(error => { console.error('Q ALREADY SENT COMMANMD', error); });
-}
+};
+
+module.exports.help = {
+  name: 'q',
+  category: 'fun',
+  description: 'Starts a random Trivia Question',
+  usage: ';q',
+  aliases: ['trivia', 'question'],
+};

@@ -16,19 +16,10 @@ module.exports = (client, message) => {
   score.points++;
   const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
   if (score.level < curLevel) {
-    function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '0x';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
     score.level++;
     embed = new Discord.MessageEmbed()
-      .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
-      .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
-      .setColor(getRandomColor());
+      .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`)
+      .setColor(client.getRandomColor());
     message.channel.send(embed).catch(error => { console.error('LEVEL UP', error); });
   }
   client.setScore.run(score);
@@ -37,7 +28,7 @@ module.exports = (client, message) => {
   if (message.content.indexOf(client.config.prefix) !== 0) return;
   const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const cmd = client.commands.get(command);
+  const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
   if (!cmd) return;
   cmd.run(client, message, args);
 };
