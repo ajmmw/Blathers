@@ -3,7 +3,8 @@ exports.run = (client, message, args) => {
     .then(res => res.json()).then(body => {
       embed = new Discord.MessageEmbed()
         .setImage(body.data.image_original_url)
-        .setColor(client.getRandomColor());
+        .setColor(client.getRandomColor())
+        .setFooter(`Powered by GIPHY`, `https://developers.giphy.com/static/img/favicon.22918c3c9ee5.png`);
       return message.channel.send(embed).catch(error => { console.error('GIF COMMANMD', error); });
     })
 };
