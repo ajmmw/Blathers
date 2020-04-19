@@ -3,7 +3,7 @@
 .vscode/
 node_modules/
 FAQ.txt
-config.json
+config.js
 users.sqlite
 users.sqlite-wal
 users.sqlite-shm
