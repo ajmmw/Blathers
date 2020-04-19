@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  return message.channel.send(`GIFs are currently disabled due to API error. Please visit support server for more information by typing \`;info\``);
   fetch(`https://api.giphy.com/v1/gifs/random?api_key=${client.config.giphyAPI}&tag=animalcrossing`)
     .then(res => res.json()).then(body => {
       embed = new Discord.MessageEmbed()

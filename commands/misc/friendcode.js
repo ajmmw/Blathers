@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
                 .setAuthor(`${message.member.displayName}'s Friend Code`, message.author.displayAvatarURL())
                 .setTitle('Successfully set your friend code!')
                 .setColor('#e4000f')
-                .setDescription(`**${User.code}**`);
+                .setDescription(`**<:switch:700955215859417190> ${User.code}**`);
             return message.channel.send(embed);
 
         // Remove Friendcode
@@ -48,8 +48,8 @@ exports.run = (client, message, args) => {
 
         // Display User Friendcode
         default:
-            User = client.getFC.get(message.author.id);
             if (args.length === 0) {
+                User = client.getFC.get(message.author.id);
                 if (!User) {
                     embed = new Discord.MessageEmbed()
                         .setDescription(`**No Code Found!**\n<@${message.author.id}> You have not set a friend code! You can do so by running \`;fc set <code>\`!`)
@@ -59,15 +59,15 @@ exports.run = (client, message, args) => {
                 embed = new Discord.MessageEmbed()
                     .setAuthor(`${message.member.displayName}'s Friend Code`, message.author.displayAvatarURL())
                     .setColor('#e4000f')
-                    .setDescription(`**${User.code}**`);
+                    .setDescription(`**<:switch:700955215859417190> ${User.code}**`);
 
                 return message.channel.send(embed);
             }
 
             // See Tagged Users Friendcode
             member = message.mentions.members.first();
-            User = client.getFC.get(message.mentions.members.first().id);
             if (member) {
+                User = client.getFC.get(message.mentions.members.first().id);
                 if (!User) {
                     embed = new Discord.MessageEmbed()
                         .setDescription(`**No Code Found!**\n${member.displayName} has not set their friend code!`)
@@ -77,7 +77,7 @@ exports.run = (client, message, args) => {
                 embed = new Discord.MessageEmbed()
                     .setAuthor(`${member.displayName}'s Friend Code`, member.user.displayAvatarURL())
                     .setColor('#e4000f')
-                    .setDescription(`**${User.code}**`);
+                    .setDescription(`**<:switch:700955215859417190> ${User.code}**`);
 
                 return message.channel.send(embed);
             }

@@ -61,13 +61,13 @@ exports.run = async (client, message, args) => {
                 }
                 client.channels.cache.get(message.channel.id).send(`Correct ${collected.first().author.toString()}! You scored ${points} <:bells:698107158805348373>.`);
                 let score;
-                score = client.getScore.get(message.author.id, message.guild.id);
+                score = client.getScore.get(collected.first().author.id, message.guild.id);
                 score.points += points;
                 const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
                 if (score.level < curLevel) {
                   score.level++;
                   embed = new Discord.MessageEmbed()
-                    .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
+                    .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
                     .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
                     .setColor(getRandomColor());
                   message.channel.send(embed).catch(error => { console.error('Q LEVEL COMMANMD', error); });
