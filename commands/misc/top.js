@@ -9,13 +9,18 @@ exports.run = (client, message, args) => {
   for (const data of top10) {
     embed.addField(`${data.name}`, `${data.points} Bells (level ${data.level})`);
   }
-  return message.channel.send(embed).catch(error => { console.error('TOP COMMANMD', error); });
+  return message.channel.send(embed);
+};
+
+module.exports.conf = {
+  enabled: true,
+  permLevel: 'User',
+  aliases: ['ladder'],
 };
 
 module.exports.help = {
   name: 'top',
   category: 'misc',
   description: 'Display the current Top10 users with the most Bells on the server.',
-  usage: ';top',
-  aliases: ['ladder'],
+  usage: 'top',
 };

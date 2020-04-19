@@ -1,23 +1,51 @@
-exports.run = (client, message, args) => {
-    message.author.send("https://discord.gg/TuEEkVc").catch(() => { return message.reply("Please unblock your DMs so I can send you the help commands.") });
-    embed = new Discord.MessageEmbed()
-        .setTitle(`Blathers Help`)
-        .addField(`;lookup`, `Search the Museum database for a particular item/animal. \n\`;lookup fish Carp\` or \`;lookup fish Great White Shark\``)
-        .addField(`;bells`, `Check your current Bells earned.`)
-        .addField(`;fc`, `Share your Friend Code. \`;fc set <code>\``)
-        .addField(`;top`, `Show the Top10 Bell earners in your server.`)
-        .addField(`;gif`, `Display a random Animal Crossing GIF. \`Issues with API Key\``)
-        .addField(`;info`, `Information about the bot.`)
-        .addField(`;invite`, `Get a link to invite the bot to your server.`)
-        .addField(`;q`, `Generate a random Trivia Question.`)
-        .setColor(0xFF0092);
-    message.author.send(embed).catch(() => { return });
+exports.run = (client, message, [command], level) => {
+    if (!command) {
+        let commands = client.commands.filter((cmd) => client.levelCache[cmd.conf.permLevel] <= level);
+
+        const commandNames = commands.keyArray();
+        const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
+
+        let currentCategory = '';
+        let output = `= Command List =\n\n[Use ${client.config.prefix}help <command name> for details]\n`;
+
+        const sorted = commands.array().sort((p, c) => (p.help.category > c.help.category ? 1
+            : p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1));
+        sorted.forEach((c) => {
+            const cat = c.help.category.toProperCase();
+            if (currentCategory !== cat) {
+                output += `\u200b\n== ${cat} ==\n`;
+                currentCategory = cat;
+            }
+            output += `${client.config.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
+        });
+        message.channel.send(output, { code: 'asciidoc', split: { char: '\u200b' } });
+    } else if (client.commands.has(command) || client.aliases.has(command)) {
+        const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
+
+        let output = `= ${cmd.help.name.toProperCase()} = \n${cmd.help.description}\n\nUsage :: ${client.config.prefix}${cmd.help.usage}`;
+
+        if (cmd.conf.aliases) {
+            output += `\nAliases :: ${cmd.conf.aliases.join(', ')}`;
+        }
+
+        if (cmd.help.details) {
+            output += `\nDetails :: ${cmd.help.details}`;
+        }
+
+        return message.channel.send(output, { code: 'asciidoc' });
+    } else {
+        return client.error(message.channel, 'Invalid Command!', `All valid commands can be found by using \`${client.config.prefix}help\`!`);
+    }
+};
+
+module.exports.conf = {
+    enabled: true,
+    permLevel: 'User',
 };
 
 module.exports.help = {
     name: 'help',
     category: 'info',
-    description: 'Sends a DM with the current bot commands.',
-    usage: ';help',
-    aliases: [],
+    description: 'Displays all commands available to you',
+    usage: 'help <command>',
 };

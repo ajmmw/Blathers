@@ -5,7 +5,7 @@ const client = new Discord.Client();
 // Get Config
 const { version } = require('./package.json');
 client.version = `v${version}`;
-const config = require("./config.json");
+const config = require("./config");
 client.config = config;
 
 // JSON Fetch
@@ -52,10 +52,11 @@ fs.readdir('./commands/', (err, folders) => {
 
                 const props = require(`./commands/${folders[i]}/${file}`);
                 const commandName = props.help.name;
+                console.log(`Attempting to load command ${commandName}`);
                 client.commands.set(commandName, props);
 
-                if (props.help.aliases) {
-                    props.help.aliases.forEach((alias) => {
+                if (props.conf.aliases) {
+                    props.conf.aliases.forEach((alias) => {
                         client.aliases.set(alias, commandName);
                     });
                 }
@@ -63,6 +64,12 @@ fs.readdir('./commands/', (err, folders) => {
         });
     }
 });
+
+client.levelCache = {};
+for (let i = 0; i < config.permLevels.length; i++) {
+    const thislvl = config.permLevels[i];
+    client.levelCache[thislvl.name] = thislvl.level;
+}
 
 global.sentTrivia = new Set();
 

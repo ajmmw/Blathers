@@ -12,10 +12,7 @@ exports.run = (client, message, args) => {
     if (table == 'fish') {
         Fish = client.getFish.get(value);
         if (!Fish) {
-            embed = new Discord.MessageEmbed()
-                .setDescription(`<@${message.author.id}> there is no such Fish in our Museum right now.`)
-                .setColor(0xFF0000);
-            return message.channel.send(embed).catch(() => { return });
+            return client.error(message.channel, 'No Fish Found!', `<@${message.author.id}> there is no such fish in our Museum right now.`);
         } else
             embed = new Discord.MessageEmbed()
                 .setAuthor(`${Fish.name}`, null)
@@ -28,17 +25,14 @@ exports.run = (client, message, args) => {
                 .addField(`Avalible (Southern Hemisphere)`, `${Fish.sh}`, false)
                 .setThumbnail(Fish.image)
                 .setColor(client.getRandomColor());
-        return message.channel.send(embed).catch(error => { console.error('LOOKUP COMMANMD', error); });
+        return message.channel.send(embed);
     }
 
     // Bug Lookup
     if (table == 'bug') {
         Bug = client.getBug.get(value);
         if (!Bug) {
-            embed = new Discord.MessageEmbed()
-                .setDescription(`<@${message.author.id}> there is no such bug in our Museum right now.`)
-                .setColor(0xFF0000);
-            return message.channel.send(embed).catch(() => { return });
+            return client.error(message.channel, 'No Bug Found!', `<@${message.author.id}> there is no such bug in our Museum right now.`);
         } else
             embed = new Discord.MessageEmbed()
                 .setAuthor(`${Bug.name}`, null)
@@ -54,10 +48,16 @@ exports.run = (client, message, args) => {
     }
 };
 
+module.exports.conf = {
+    enabled: true,
+    permLevel: 'User',
+    aliases: ['search'],
+};
+
 module.exports.help = {
     name: 'lookup',
     category: 'misc',
     description: 'Lookup a certain fish/bug from the Museum',
-    usage: ';lookup',
-    aliases: ['search'],
+    usage: 'lookup <type> <name>',
+    details: "<type> => The lookup type ie: fish or bug.\n<name> => The name of the fish or bug required to lookup.",
 };

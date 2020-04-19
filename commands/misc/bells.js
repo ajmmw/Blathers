@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
         embed = new Discord.MessageEmbed()
           .setDescription(`<@${message.author.id}>, You currently have ${User.points} <:bells:698107158805348373> and are level ${User.level}!`)
           .setColor(client.getRandomColor());
-        return message.channel.send(embed).catch(error => { console.error('BELLS COMMANMD', error); });
+        return message.channel.send(embed);
       }
 
       // See Tagged Users Bells
@@ -16,29 +16,27 @@ exports.run = (client, message, args) => {
       if (member) {
         User = client.getScore.get(message.mentions.members.first().id, message.guild.id);
         if (!User) {
-          embed = new Discord.MessageEmbed()
-            .setDescription(`**No Bells Found!**\n<@${message.mentions.members.first().id}> has yet to be active in the server.`)
-            .setColor(0xFF0000);
-          return message.channel.send(embed);
+          return client.error(message.channel, 'No Bells Found!', `<@${message.mentions.members.first().displayName}> has yet to be active in the server.`);
         }
         embed = new Discord.MessageEmbed()
-        .setDescription(`<@${message.mentions.members.first().id}> Currently has ${User.points} <:bells:698107158805348373> and is level ${User.level}!`)
+          .setDescription(`<@${message.mentions.members.first().id}> Currently has ${User.points} <:bells:698107158805348373> and is level ${User.level}!`)
           .setColor(client.getRandomColor());
-
         return message.channel.send(embed);
       }
-
-      embed = new Discord.MessageEmbed()
-        .setDescription(`**Unknown Member!**\nCould not find a member by that name!`)
-        .setColor(0xFF0000);
-      return message.channel.send(embed);
+      return client.error(message.channel, 'Unknown Member!', `Could not find a member by that name!`);
   }
+};
+
+module.exports.conf = {
+  enabled: true,
+  permLevel: 'User',
+  aliases: ['bal'],
 };
 
 module.exports.help = {
   name: 'bells',
   category: 'misc',
-  description: 'Shows your current Level and Bells on the current server.',
-  usage: ';bells',
-  aliases: ['bal'],
+  description: 'Shows your current Level and Bells on the current server',
+  usage: 'bells <@user>',
+  details: "<@user> => Only necessary if you're getting the bell amount of another member.",
 };

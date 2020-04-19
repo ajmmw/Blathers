@@ -20,10 +20,15 @@ exports.run = (client, message, args) => {
     return message.channel.send(embed).catch(error => { console.error('INFO COMMANMD', error); })
 };
 
+module.exports.conf = {
+    enabled: true,
+    permLevel: 'User',
+    aliases: ['ver'],
+};
+
 module.exports.help = {
     name: 'info',
-    category: 'info',
+    category: 'system',
     description: 'Shows information about the bot.',
-    usage: ';info',
-    aliases: ['ver'],
+    usage: 'info',
 };

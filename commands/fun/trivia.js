@@ -3,7 +3,7 @@ exports.run = async (client, message, args) => {
     embed = new Discord.MessageEmbed()
       .setTitle(`Generating`)
       .setColor(0xFFA21C);
-    let question = await message.channel.send(embed).catch(error => { console.error('Q GEN COMMANMD', error); })
+    let question = await message.channel.send(embed)
     fetch("https://opentdb.com/api.php?amount=1&encode=base64")
       .then(res => res.json()).then(body => {
         sentTrivia.add(message.guild.id);
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
           embed.addField(`Answer ${[i + 1]}`, `${options[i]}`, true);
         }
 
-        question.edit(embed).catch(error => { console.error('Q SEND COMMANMD', error); })
+        question.edit(embed).catch(error => {return;})
           .then(() => {
             client.channels.cache.get(message.channel.id).awaitMessages(response => response.content.toLowerCase() == Buffer.from(body.results[0].correct_answer, 'base64').toString().toLowerCase(), {
               max: 1,
@@ -51,7 +51,7 @@ exports.run = async (client, message, args) => {
                   .addField("Guesser:", collected.first().author.toString())
                   .addField("Answer:", Buffer.from(body.results[0].correct_answer, 'base64').toString())
                   .setColor(0x01C818);
-                question.edit(embed).catch(error => { console.error('Q ANSWERED COMMANMD', error); });
+                question.edit(embed).catch(error => {return;});
                 if (Buffer.from(body.results[0].difficulty, 'base64').toString().toUpperCase() == 'EASY') {
                   points = 10;
                 } else if (Buffer.from(body.results[0].difficulty, 'base64').toString().toUpperCase() == 'MEDIUM') {
@@ -70,7 +70,7 @@ exports.run = async (client, message, args) => {
                     .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
                     .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
                     .setColor(getRandomColor());
-                  message.channel.send(embed).catch(error => { console.error('Q LEVEL COMMANMD', error); });
+                  message.channel.send(embed);
                 }
                 return client.setScore.run(score);
               })
@@ -82,19 +82,24 @@ exports.run = async (client, message, args) => {
                   .setThumbnail(``)
                   .addField("Answer:", Buffer.from(body.results[0].correct_answer, 'base64').toString())
                   .setColor(0xE90E0E);
-                question.edit(embed);
-                client.channels.cache.get(message.channel.id).send(`No one answered correctly, the answer was ${Buffer.from(body.results[0].correct_answer, 'base64').toString()}.`).catch(error => { console.error('Q FAILED COMMANMD', error); });
+                question.edit(embed).catch(error => { return; });
+                return client.channels.cache.get(message.channel.id).send(`No one answered correctly, the answer was ${Buffer.from(body.results[0].correct_answer, 'base64').toString()}.`).catch(error => {return;});
               });
           });
       })
   } else
-    client.channels.cache.get(message.channel.id).send(`A question has already been asked.`).catch(error => { console.error('Q ALREADY SENT COMMANMD', error); });
+    client.channels.cache.get(message.channel.id).send(`A question has already been asked.`);
+};
+
+module.exports.conf = {
+  enabled: true,
+  permLevel: 'User',
+  aliases: ['q', 'question'],
 };
 
 module.exports.help = {
-  name: 'q',
+  name: 'trivia',
   category: 'fun',
   description: 'Starts a random Trivia Question',
-  usage: ';q',
-  aliases: ['trivia', 'question'],
+  usage: 'q',
 };
