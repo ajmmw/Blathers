@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
           embed.addField(`Answer ${[i + 1]}`, `${options[i]}`, true);
         }
 
-        question.edit(embed).catch(error => {return;})
+        question.edit(embed).catch(err =>{return;})
           .then(() => {
             client.channels.cache.get(message.channel.id).awaitMessages(response => response.content.toLowerCase() == Buffer.from(body.results[0].correct_answer, 'base64').toString().toLowerCase(), {
               max: 1,
@@ -51,7 +51,7 @@ exports.run = async (client, message, args) => {
                   .addField("Guesser:", collected.first().author.toString())
                   .addField("Answer:", Buffer.from(body.results[0].correct_answer, 'base64').toString())
                   .setColor(0x01C818);
-                question.edit(embed).catch(error => {return;});
+                question.edit(embed).catch(err =>{return;});
                 if (Buffer.from(body.results[0].difficulty, 'base64').toString().toUpperCase() == 'EASY') {
                   points = 10;
                 } else if (Buffer.from(body.results[0].difficulty, 'base64').toString().toUpperCase() == 'MEDIUM') {
@@ -82,7 +82,7 @@ exports.run = async (client, message, args) => {
                   .setThumbnail(``)
                   .addField("Answer:", Buffer.from(body.results[0].correct_answer, 'base64').toString())
                   .setColor(0xE90E0E);
-                question.edit(embed).catch(error => { return; });
+                question.edit(embed).catch(err =>{return;});
                 return client.channels.cache.get(message.channel.id).send(`No one answered correctly, the answer was ${Buffer.from(body.results[0].correct_answer, 'base64').toString()}.`).catch(error => {return;});
               });
           });
@@ -93,8 +93,9 @@ exports.run = async (client, message, args) => {
 
 module.exports.conf = {
   enabled: true,
-  permLevel: 'User',
   aliases: ['q', 'question'],
+  permLevel: 'User',
+  cooldown: 10,
 };
 
 module.exports.help = {

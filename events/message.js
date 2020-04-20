@@ -1,4 +1,7 @@
-module.exports = (client, message) => {
+
+const cooldowns = new Discord.Collection();
+
+module.exports = async (client, message) => {
   if (!message.guild || message.author.bot) return;
   if (!message.channel.permissionsFor(message.guild.me).has(['SEND_MESSAGES', 'EMBED_LINKS'])) return;
   //Bot is Mentioned
@@ -43,5 +46,34 @@ module.exports = (client, message) => {
   if (level[1] < client.levelCache[cmd.conf.permLevel]) {
     return client.error(message.channel, 'Invalid Permissions!', `You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``);
   }
+
+  if (!cooldowns.has(cmd.help.name)) {
+    cooldowns.set(cmd.help.name, new Discord.Collection());
+  }
+
+  const now = Date.now();
+  const timestamps = cooldowns.get(cmd.help.name);
+  const cooldownAmount = (cmd.conf.cooldown || 0) * 1000;
+
+  if (timestamps.has(message.author.id)) {
+    if (level[1] < 2) {
+      const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+
+      if (now < expirationTime) {
+        let timeLeft = (expirationTime - now) / 1000;
+        let time = 'second(s)';
+        if (cmd.conf.cooldown > 60) {
+          timeLeft = (expirationTime - now) / 60000;
+          time = 'minute(s)';
+        }
+        return client.error(message.channel, 'Woah There Bucko!', `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);
+      }
+    }
+  }
+
+  timestamps.set(message.author.id, now);
+  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+
+
   cmd.run(client, message, args, level[1], Discord);
 };

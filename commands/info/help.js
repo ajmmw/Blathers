@@ -40,7 +40,9 @@ exports.run = (client, message, [command], level) => {
 
 module.exports.conf = {
     enabled: true,
+    aliases: [],
     permLevel: 'User',
+    cooldown: 10,
 };
 
 module.exports.help = {

@@ -13,17 +13,18 @@ exports.run = (client, message, args) => {
         .addField(`Servers`, `${client.guilds.cache.size}`, true)
         .addField(`Users`, `${client.users.cache.size}`, true)
         .addField(`Invite`, `[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=387072&scope=bot)`, true)
-        .addField(`Discord`, `[Support Discord](https://discord.gg/TuEEkVc)`, true)
+        .addField(`Discord`, `[Support Discord](https://discord.gg/z6uApMZ)`, true)
         .addField(`Developer`, `PnKllr`, true)
         .setFooter(`Uptime ${uptime(client.uptime)}`)
         .setColor(0xFF0092);
-    return message.channel.send(embed).catch(error => { console.error('INFO COMMANMD', error); })
+    return message.channel.send(embed)
 };
 
 module.exports.conf = {
     enabled: true,
-    permLevel: 'User',
     aliases: ['ver'],
+    permLevel: 'User',
+    cooldown: 10,
 };
 
 module.exports.help = {

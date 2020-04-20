@@ -6,6 +6,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.conf = {
     enabled: true,
+    aliases: [],
     permLevel: 'Bot Owner',
 };
 

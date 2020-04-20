@@ -53,7 +53,7 @@ exports.run = (client, message, args) => {
             if (member) {
                 User = client.getFC.get(message.mentions.members.first().id);
                 if (!User) {
-                    client.error(message.channel, 'No Code Found!', `${member.displayName} has not set their friend code!`);
+                   return client.error(message.channel, 'No Code Found!', `${member.displayName} has not set their friend code!`);
                 }
                 embed = new Discord.MessageEmbed()
                     .setAuthor(`${member.displayName}'s Friend Code`, member.user.displayAvatarURL())
@@ -68,8 +68,9 @@ exports.run = (client, message, args) => {
 
 module.exports.conf = {
     enabled: true,
-    permLevel: 'User',
     aliases: ['fc'],
+    permLevel: 'User',
+    cooldown: 10,
 };
 
 module.exports.help = {

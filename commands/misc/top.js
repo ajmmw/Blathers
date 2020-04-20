@@ -14,8 +14,9 @@ exports.run = (client, message, args) => {
 
 module.exports.conf = {
   enabled: true,
-  permLevel: 'User',
   aliases: ['ladder'],
+  permLevel: 'User',
+  cooldown: 10,
 };
 
 module.exports.help = {

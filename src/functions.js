@@ -2,11 +2,11 @@ module.exports = (client) => {
 
   // Status Messages
   client.success = (channel, suc, msg) => {
-    channel.send(`**${suc}**\n${msg}`);
+    channel.send(`<:tick:701739061131345920> **${suc}**\n${msg}`);
   };
 
   client.error = (channel, err, msg) => {
-    channel.send(`**${err}**\n${msg}`);
+    channel.send(`<:cross:701739087400534016> **${err}**\n${msg}`);
   };
 
   // Perm Levels

@@ -5,8 +5,9 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.conf = {
     enabled: true,
-    permLevel: 'User',
     aliases: ['p'],
+    permLevel: 'User',
+    cooldown: 10,
 };
 
 module.exports.help = {
