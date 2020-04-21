@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
 		return `${days.padStart(1, '0')} days ${hrs.padStart(2, '0')} hours ${min.padStart(2, '0')} minutes`;
 	}
 	const embed = new Discord.MessageEmbed()
-		.addField(`Version`, `${version}`, true)
+		.addField(`Version`, `${obj.version}`, true)
 		.addField(`Library`, `[discord.js](https://discord.js.org/#/)`, true)
 		.addField(`Node JS`, `${process.version}`, true)
 		.addField(`Servers`, `${client.guilds.cache.size}`, true)
