@@ -18,7 +18,8 @@ exports.run = (client, message, [command], level) => {
             }
             output += `${client.config.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
         });
-        message.channel.send(output, { code: 'asciidoc', split: { char: '\u200b' } });
+        output += `\n= Join the Support Server =\nhttps://discord.gg/z6uApMZ`;
+        return message.author.send(output, { code: 'asciidoc', split: { char: '\u200b' } }).catch(() => { return message.reply("Please unblock your DMs so I can send you the help commands.") });
     } else if (client.commands.has(command) || client.aliases.has(command)) {
         const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
@@ -32,7 +33,7 @@ exports.run = (client, message, [command], level) => {
             output += `\nDetails :: ${cmd.help.details}`;
         }
 
-        return message.channel.send(output, { code: 'asciidoc' });
+        return message.author.send(output, { code: 'asciidoc' }).catch(() => { return });
     } else {
         return client.error(message.channel, 'Invalid Command!', `All valid commands can be found by using \`${client.config.prefix}help\`!`);
     }
