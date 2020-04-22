@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
 			`[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=387072&scope=bot)`,
 			true
 		)
-		.addField(`Discord`, `[Support Discord](https://discord.gg/z6uApMZ)`, true)
+		.addField(`Support`, `[Click Here](https://discord.gg/z6uApMZ)`, true)
 		.addField(`Developer`, `PnKllr`, true)
 		.setFooter(`Uptime ${uptime(client.uptime)}`)
 		.setColor(0xff0092);
