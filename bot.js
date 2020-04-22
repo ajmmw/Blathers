@@ -25,51 +25,49 @@ require('./src/functions')(client);
 const fs = require('fs');
 const Enmap = require('enmap');
 fs.readdir('./events/', (err, files) => {
-	if (err) return console.error(err);
-	files.forEach((file) => {
-		const event = require(`./events/${file}`);
-		let eventName = file.split('.')[0];
-		client.on(eventName, event.bind(null, client));
-	});
+    if (err) return console.error(err);
+    files.forEach((file) => {
+        const event = require(`./events/${file}`);
+        let eventName = file.split('.')[0];
+        client.on(eventName, event.bind(null, client));
+    });
 });
 
 client.commands = new Enmap();
 client.aliases = new Enmap();
 
 fs.readdir('./commands/', (err, folders) => {
-	if (err) {
-		return console.error(err);
-	}
+    if (err) { return console.error(err); }
 
-	for (let i = 0; i < folders.length; i++) {
-		fs.readdir(`./commands/${folders[i]}/`, (error, files) => {
-			if (error) {
-				return console.error(error);
-			}
-			files.forEach((file) => {
-				if (!file.endsWith('.js')) {
-					return;
-				}
+    for (let i = 0; i < folders.length; i++) {
+        fs.readdir(`./commands/${folders[i]}/`, (error, files) => {
+            if (error) {
+                return console.error(error);
+            }
+            files.forEach((file) => {
+                if (!file.endsWith('.js')) {
+                    return;
+                }
 
-				const props = require(`./commands/${folders[i]}/${file}`);
-				const commandName = props.help.name;
-				console.log(`Attempting to load command ${commandName}`);
-				client.commands.set(commandName, props);
+                const props = require(`./commands/${folders[i]}/${file}`);
+                const commandName = props.help.name;
+                console.log(`Attempting to load command ${commandName}`);
+                client.commands.set(commandName, props);
 
-				if (props.conf.aliases) {
-					props.conf.aliases.forEach((alias) => {
-						client.aliases.set(alias, commandName);
-					});
-				}
-			});
-		});
-	}
+                if (props.conf.aliases) {
+                    props.conf.aliases.forEach((alias) => {
+                        client.aliases.set(alias, commandName);
+                    });
+                }
+            });
+        });
+    }
 });
 
 client.levelCache = {};
 for (let i = 0; i < config.permLevels.length; i++) {
-	const thislvl = config.permLevels[i];
-	client.levelCache[thislvl.name] = thislvl.level;
+    const thislvl = config.permLevels[i];
+    client.levelCache[thislvl.name] = thislvl.level;
 }
 
 global.sentTrivia = new Set();
