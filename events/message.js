@@ -2,7 +2,7 @@ const cooldowns = new Discord.Collection();
 
 module.exports = async (client, message) => {
 	if (!message.guild || message.author.bot) return;
-	if (!message.channel.permissionsFor(message.guild.me).has([ 'SEND_MESSAGES', 'EMBED_LINKS' ])) return;
+	if (!message.channel.permissionsFor(message.guild.me).has(['SEND_MESSAGES', 'EMBED_LINKS'])) return;
 	//Bot is Mentioned
 	if (message.mentions.has(client.user)) {
 		if (message.mentions.everyone) return;
@@ -28,10 +28,7 @@ module.exports = async (client, message) => {
 	if (score.level < curLevel) {
 		score.level++;
 		embed = new Discord.MessageEmbed()
-			.setDescription(
-				`<@${message.author
-					.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`
-			)
+			.setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`)
 			.setColor(client.getRandomColor());
 		message.channel.send(embed);
 	}
@@ -49,21 +46,14 @@ module.exports = async (client, message) => {
 	if (cmd.conf.enabled === false) {
 		if (level[1] < 2) {
 			return client.error(
-				message.channel,
-				'Command Disabled',
-				`This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``
-			);
+				message.channel, 'Command Disabled', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
 		}
 	}
 
 	// Check Perm Level
 	if (level[1] < client.levelCache[cmd.conf.permLevel]) {
 		return client.error(
-			message.channel,
-			'Invalid Permissions!',
-			`You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd
-				.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``
-		);
+			message.channel, 'Invalid Permissions!', `You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``);
 	}
 
 	if (!cooldowns.has(cmd.help.name)) {
@@ -86,11 +76,7 @@ module.exports = async (client, message) => {
 					time = 'minute(s)';
 				}
 				return client.error(
-					message.channel,
-					'Woah There Bucko!',
-					`Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help
-						.name}\` command!`
-				);
+					message.channel, 'Woah There Bucko!', `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);
 			}
 		}
 	}

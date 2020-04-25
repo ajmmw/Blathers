@@ -1,6 +1,5 @@
 module.exports.run = async (client, message, args) => {
-	//Looking into this, not sure how this works, if it works. Since I can't access the bot's server I can't work on a method.
-	//However, if this doesn't work, check this out: https://stackoverflow.com/questions/23766259/restart-node-js-server-programmatically
+	//Force stops the node process, Systemctl then starts it back up.
 	await message.channel.send('Rebooting bot! Please allow at least 10 seconds for the bot to fully reboot!');
 	console.log('Bot rebooting...');
 	process.exit(0);
