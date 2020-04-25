@@ -22,6 +22,7 @@ exports.run = (client, message, args) => {
     .addField(`Developer`, `PnKllr`, true)
     .addField(`Invite`, `[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=387072&scope=bot)`, true)
     .addField(`Support`, `[Click Here](https://discord.gg/z6uApMZ)`, true)
+    .addField(`Vote`, `[Click Here](https://top.gg/bot/598007871720128544/vote)`, true)
     .setFooter(`Uptime ${uptime(client.uptime)}`, client.user.displayAvatarURL())
     .setColor(0xff0092);
   return message.channel.send(embed);
