@@ -7,12 +7,12 @@ module.exports.conf = {
     enabled: true,
     aliases: ['p'],
     permLevel: 'User',
-    cooldown: 10,
+    cooldown: 10
 };
 
 module.exports.help = {
     name: 'ping',
     category: 'system',
     description: 'Pings the client',
-    usage: 'ping',
+    usage: 'ping'
 };

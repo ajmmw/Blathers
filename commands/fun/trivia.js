@@ -95,12 +95,12 @@ module.exports.conf = {
   enabled: true,
   aliases: ['q', 'question'],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
   name: 'trivia',
   category: 'fun',
   description: 'Starts a random Trivia Question',
-  usage: 'q',
+  usage: 'q'
 };

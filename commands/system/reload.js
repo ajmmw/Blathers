@@ -17,7 +17,7 @@ module.exports.run = (client, message, args, level) => {
   module.exports.conf = {
     guildOnly: false,
     aliases: [],
-    permLevel: 'Bot Owner',
+    permLevel: 'Bot Owner'
   };
   
   module.exports.help = {
@@ -25,5 +25,5 @@ module.exports.run = (client, message, args, level) => {
     category: 'system',
     description: 'Deletes the cache and reloads the specified command',
     usage: 'reload <command name>',
-    details: '<command name> => Any valid command name',
+    details: '<command name> => Any valid command name'
   };

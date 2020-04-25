@@ -13,12 +13,12 @@ module.exports.conf = {
   enabled: false,
   aliases: [],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
   name: 'gif',
   category: 'fun',
   description: 'Displays a random Animal Crossing GIF',
-  usage: 'gif',
+  usage: 'gif'
 };

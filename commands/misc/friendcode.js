@@ -70,7 +70,7 @@ module.exports.conf = {
     enabled: true,
     aliases: ['fc'],
     permLevel: 'User',
-    cooldown: 10,
+    cooldown: 10
 };
 
 module.exports.help = {
@@ -78,5 +78,5 @@ module.exports.help = {
     category: 'misc',
     description: 'Displays your Nintendo Switch Friend Code',
     usage: 'friendcode <set|delete> <code|@user>',
-    details: "<set|del> => Whether to set a new friend code or delete an existing one.\n<code|@member> => Only necessary if you're setting a new code or getting the code of another member.",
+    details: "<set|del> => Whether to set a new friend code or delete an existing one.\n<code|@member> => Only necessary if you're setting a new code or getting the code of another member."
 };

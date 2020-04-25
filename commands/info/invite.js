@@ -11,12 +11,12 @@ module.exports.conf = {
   enabled: true,
   aliases: ['inv', 'add'],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
   name: 'invite',
   category: 'info',
   description: 'Displays and link to invite the bot to your own server',
-  usage: 'invite',
+  usage: 'invite'
 };

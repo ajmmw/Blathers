@@ -17,8 +17,8 @@ exports.run = (client, message, args) => {
                     .addField(`Shadow Size`, `${Fish.size}`, true)
                     .addField(`Time of Day`, `${Fish.time}`, true)
                     .addField(`Location`, `${Fish.location}`, true)
-                    .addField(`Avalible (Northern Hemisphere)`, `${Fish.nh}`, false)
-                    .addField(`Avalible (Southern Hemisphere)`, `${Fish.sh}`, false)
+                    .addField(`Available (Northern Hemisphere)`, `${Fish.nh}`, false)
+                    .addField(`Available (Southern Hemisphere)`, `${Fish.sh}`, false)
                     .setThumbnail(Fish.image)
                     .setColor(client.getRandomColor());
             return message.channel.send(embed);
@@ -39,8 +39,8 @@ exports.run = (client, message, args) => {
                     .addField(`Price`, `${Bug.price} <:bells:698107158805348373>`, true)
                     .addField(`Time of Day`, `${Bug.time}`, true)
                     .addField(`Location`, `${Bug.location}`, true)
-                    .addField(`Avalible (Northern Hemisphere)`, `${Bug.nh}`, false)
-                    .addField(`Avalible (Southern Hemisphere)`, `${Bug.sh}`, false)
+                    .addField(`Available (Northern Hemisphere)`, `${Bug.nh}`, false)
+                    .addField(`Available (Southern Hemisphere)`, `${Bug.sh}`, false)
                     .setThumbnail(Bug.image)
                     .setColor(client.getRandomColor());
             return message.channel.send(embed);
@@ -53,7 +53,7 @@ module.exports.conf = {
     enabled: true,
     aliases: ['search'],
     permLevel: 'User',
-    cooldown: 10,
+    cooldown: 10
 };
 
 module.exports.help = {
@@ -61,5 +61,5 @@ module.exports.help = {
     category: 'misc',
     description: 'Lookup a certain fish/bug from the Museum',
     usage: 'lookup <type> <name>',
-    details: "<type> => The lookup type ie: fish or bug.\n<name> => The name of the fish or bug required to lookup.",
+    details: "<type> => The lookup type ie: fish or bug.\n<name> => The name of the fish or bug required to lookup."
 };

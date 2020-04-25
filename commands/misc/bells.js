@@ -31,7 +31,7 @@ module.exports.conf = {
   enabled: true,
   aliases: ['bal'],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
@@ -39,5 +39,5 @@ module.exports.help = {
   category: 'misc',
   description: 'Shows your current Level and Bells on the current server',
   usage: 'bells <@user>',
-  details: "<@user> => Only necessary if you're getting the bell amount of another member.",
+  details: "<@user> => Only necessary if you're getting the bell amount of another member."
 };

@@ -7,12 +7,12 @@ module.exports.run = async (client, message, args) => {
 module.exports.conf = {
     enabled: true,
     aliases: [],
-    permLevel: 'Bot Owner',
+    permLevel: 'Bot Owner'
 };
 
 module.exports.help = {
     name: 'reboot',
     category: 'system',
     description: 'Reboots the bot',
-    usage: 'reboot',
+    usage: 'reboot'
 };
