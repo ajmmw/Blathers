@@ -9,11 +9,12 @@ Some features may not be avalible yet as bot is still under heavy construction.
 * ;lookup - Search the Museum database for a particular item/animal. EG: ;lookup fish Carp or ;lookup fish Great White Shark
 * ;fc - Share your Nintendo Switch Friend Code.
 * ;info - Display information about bot.
-* ;points - Check your current points earned.
-* ;q - Shows a random Trivia Question.
+* ;bells - Check your current points earned.
+* ;trivia - Shows a random Trivia Question.
 * ;gif - Displays random GIF.
 * ;top - Displays the Top10 Point Earners in the server.
 * ;invite - Get a link to invite the bot to your server.
 * ;help - Get a link to the support server and commands.
+* ;friendcode - Displays your Nintendo Switch Friendcode.
 
 
