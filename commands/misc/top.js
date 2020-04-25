@@ -16,12 +16,12 @@ module.exports.conf = {
   enabled: true,
   aliases: ['ladder'],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
   name: 'top',
   category: 'misc',
   description: 'Display the current Top10 users with the most Bells on the server.',
-  usage: 'top',
+  usage: 'top'
 };

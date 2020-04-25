@@ -43,12 +43,12 @@ module.exports.conf = {
     enabled: true,
     aliases: [],
     permLevel: 'User',
-    cooldown: 10,
+    cooldown: 10
 };
 
 module.exports.help = {
     name: 'help',
     category: 'info',
     description: 'Displays all commands available to you',
-    usage: 'help <command>',
+    usage: 'help <command>'
 };

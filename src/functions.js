@@ -1,4 +1,20 @@
 module.exports = (client) => {
+  // Clean
+  client.clean = async (text) => {
+    if (text && text.constructor.name === 'Promise') {
+      text = await text;
+    }
+    if (typeof evaled !== 'string') {
+      // eslint-disable-next-line global-require
+      text = require('util').inspect(text, { depth: 1 });
+    }
+
+    text = text
+      .replace(/`/g, `\`${String.fromCharCode(8203)}`)
+      .replace(/@/g, `@${String.fromCharCode(8203)}`)
+
+    return text;
+  };
 
   // Status Messages
   client.success = (channel, suc, msg) => {
