@@ -13,6 +13,8 @@ module.exports = (client) => {
   // Lookup
   client.getFish = DataSQL.prepare("SELECT * FROM fish WHERE name LIKE ?");
   client.getBug = DataSQL.prepare("SELECT * FROM bug WHERE name LIKE ?");
+  client.getFossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ?");
+  client.getVillager = DataSQL.prepare("SELECT * FROM villager WHERE name LIKE ?");
 
   setInterval(function () {
     client.user.setActivity(`over ${client.guilds.cache.size} Islands | ;help`, { type: 'WATCHING' });
