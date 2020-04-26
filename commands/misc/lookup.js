@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-  switch (args[0]) {
+  switch (args[0].toLowerCase()) {
     // Fish Lookup
     case 'fish':
       if (args.length === 1) {
@@ -87,13 +87,13 @@ exports.run = (client, message, args) => {
           .setColor(client.getRandomColor());
       return message.channel.send(embed);
     default:
-      return client.error(message.channel, 'No Type Selected!', `<@${message.author.id}> please supply a type to lookup.`);
+      return client.error(message.channel, 'No Type Selected!', `<@${message.author.id}> please supply either \`fish | bug | fossil | villager\`.`);
   }
 };
 
 module.exports.conf = {
   enabled: true,
-  aliases: ['search'],
+  aliases: ['search', 'l'],
   permLevel: 'User',
   cooldown: 10
 };
@@ -103,5 +103,5 @@ module.exports.help = {
   category: 'misc',
   description: 'Lookup a certain fish/bug from the Museum',
   usage: 'lookup <type> <name>',
-  details: "<type> => The lookup type ie: fish or bug.\n<name> => The name of the fish or bug required to lookup."
+  details: '<type> => The lookup type ie: fish or bug.\n<name> => The name of the fish or bug required to lookup.'
 };
