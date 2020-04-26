@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'rock':
     case 'paper':
-    case 'sissors':
+    case 'scissors':
     
       const random = Math.floor(Math.random() * choices.length);
       const final = choices[random];
@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
       }
 
     default:
-      return client.error(message.channel, 'No Choice Given', `<@${message.author.id}> please pick either \`rock | paper | sissors\``);
+      return client.error(message.channel, 'No Choice Given', `<@${message.author.id}> please pick either \`rock | paper | scissors\``);
   }
 };
 
