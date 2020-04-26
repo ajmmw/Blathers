@@ -1,4 +1,4 @@
-module.exports.run = (client, message, args) => {
+exports.run = (client, message, args) => {
   if (args.length === 0) {
     return client.error(message.channel, 'No Question Asked', `<@${message.author.id}> what was your question?`);
   }

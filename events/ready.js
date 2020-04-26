@@ -1,6 +1,5 @@
 module.exports = (client) => {
   console.log("Museum Open");
-  client.user.setActivity(`over ${client.guilds.cache.size} Islands | ;help`, { type: 'WATCHING' });
 
   //User Scores
   client.getScore = UserSQL.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
@@ -16,7 +15,18 @@ module.exports = (client) => {
   client.getFossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ?");
   client.getVillager = DataSQL.prepare("SELECT * FROM villager WHERE name LIKE ?");
 
-  setInterval(function () {
-    client.user.setActivity(`over ${client.guilds.cache.size} Islands | ;help`, { type: 'WATCHING' });
-  }, 10 * 60 * 1000);
+  const activitiesList = [
+    `on ${client.guilds.cache.size} islands`,
+    `AC:NH with ${client.users.cache.size} users`,
+    `with the developer's console`,
+    `with the ;help command`,
+    'AC:NH with PnKllr#0001',
+  ];
+
+  setInterval(() => {
+    const index = Math.floor(Math.random() * activitiesList.length);
+
+    // Setting activity
+    client.user.setActivity(activitiesList[index]);
+  }, 30000);
 }

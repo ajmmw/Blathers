@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-  switch (args[0].toLowerCase()) {
+  switch (args[0]) {
     // Fish Lookup
     case 'fish':
       if (args.length === 1) {
