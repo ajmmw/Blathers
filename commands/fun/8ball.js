@@ -11,7 +11,7 @@ module.exports.conf = {
   enabled: true,
   aliases: ['8', 'predict'],
   permLevel: 'User',
-  cooldown: 60
+  cooldown: 10
 };
 
 module.exports.help = {

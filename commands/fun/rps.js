@@ -39,7 +39,7 @@ module.exports.conf = {
   enabled: true,
   aliases: [],
   permLevel: 'User',
-  cooldown: 10,
+  cooldown: 10
 };
 
 module.exports.help = {
@@ -47,5 +47,5 @@ module.exports.help = {
   category: 'fun',
   description: 'Plays rock paper scissors',
   usage: 'rps <rock|paper|scissors>',
-  details: '<rock|paper|scissors> => Rock beats Scissors, Scissors beats Paper, Paper beats Rock.',
+  details: '<rock|paper|scissors> => Rock beats Scissors, Scissors beats Paper, Paper beats Rock.'
 };
