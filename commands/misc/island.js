@@ -90,11 +90,11 @@ exports.run = (client, message, args) => {
       if (args.length === 0) {
         UserFC = client.getFC.get(message.author.id);
         UserIS = client.getIsland.get(message.author.id);
-        if (!UserIS || !UserFC) {
+        if (!UserIS) {
           return client.error(message.channel, 'No Island Found!', `<@${message.author.id}> You have not set up your island! You can do so by running \`;is <character|name|fruit|location> <value>\`!`);
         }
         output = '';
-        if (UserFC.code != null) { output += `Friend Code: **${UserFC.code}**\n` };
+        if (UserFC) { output += `Friend Code: **${UserFC.code}**\n` };
         if (UserIS.character != null) { output += `Characters Name: **${UserIS.character}**\n` };
         if (UserIS.name != null) { output += `Island Name: **${UserIS.name}**\n` };
         if (UserIS.fruit != null) { output += `Fruit: **${UserIS.fruit}**\n` };
@@ -112,11 +112,11 @@ exports.run = (client, message, args) => {
       if (member) {
         UserFC = client.getFC.get(message.mentions.members.first().id);
         UserIS = client.getIsland.get(message.mentions.members.first().id);
-        if (!UserIS || !UserFC) {
+        if (!UserIS) {
           return client.error(message.channel, 'No Island Found!', `${member.displayName} has not set their island!`);
         }
         output = '';
-        if (UserFC.code != null) { output += `Friend Code: **${UserFC.code}**\n` };
+        if (UserFC) { output += `Friend Code: **${UserFC.code}**\n` };
         if (UserIS.character != null) { output += `Characters Name: **${UserIS.character}**\n` };
         if (UserIS.name != null) { output += `Island Name: **${UserIS.name}**\n` };
         if (UserIS.fruit != null) { output += `Fruit: **${UserIS.fruit}**\n` };
