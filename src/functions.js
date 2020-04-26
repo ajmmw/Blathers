@@ -1,6 +1,6 @@
 module.exports = (client) => {
   // Clean
-  client.clean = async (text) => {
+  client.clean = async (clientParam, text) => {
     if (text && text.constructor.name === 'Promise') {
       text = await text;
     }
@@ -12,6 +12,7 @@ module.exports = (client) => {
     text = text
       .replace(/`/g, `\`${String.fromCharCode(8203)}`)
       .replace(/@/g, `@${String.fromCharCode(8203)}`)
+      .replace(clientParam.token, 'mfa.VkO_2G4Qv3T--NO--lWetW_tjND--TOKEN--QFTm6YGtzq9PH--4U--tG0');
 
     return text;
   };

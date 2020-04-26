@@ -5,6 +5,10 @@ module.exports = (client) => {
   client.getScore = UserSQL.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
   client.setScore = UserSQL.prepare("INSERT OR REPLACE INTO scores (id, user, guild, name, points, level) VALUES (@id, @user, @guild, @name, @points, @level);");
 
+  //User Islands
+  client.getIsland = UserSQL.prepare("SELECT * FROM islands WHERE id = ?");
+  client.setIsland = UserSQL.prepare("INSERT OR REPLACE INTO islands (id, character, name, fruit, hemisphere) VALUES (@id, @character, @name, @fruit, @hemisphere);");
+
   //User Friendcode
   client.getFC = UserSQL.prepare("SELECT * FROM friendcode WHERE id = ?");
   client.setFC = UserSQL.prepare("INSERT OR REPLACE INTO friendcode (id, name, code) VALUES (@id, @name, @code);");

@@ -73,7 +73,7 @@ exports.run = (client, message, args) => {
       value = args.slice(1).join(' ');
       Villager = client.getVillager.get(value);
       if (!Villager) {
-        return client.error(message.channel, 'No Villager Found!', `<@${message.author.id}> there is no such villager in our Museum right now.`);
+        return client.error(message.channel, 'No Villager Found!', `<@${message.author.id}> there is no such villager right now.`);
       } else
         embed = new Discord.MessageEmbed()
           .setAuthor(`${Villager.name}`, null)

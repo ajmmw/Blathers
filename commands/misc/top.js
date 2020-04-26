@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.MessageEmbed()
     .setTitle("Leaderboard")
     .setDescription("Our top 10 Bell leaders!")
-    .setThumbnail(`https://pnkllr.net/projects/Lloid/balloon_float.gif`)
+    .setThumbnail(`https://pnkllr.net/projects/Blathers/balloon_float.gif`)
     .setColor(client.getRandomColor());
 
   for (const data of top10) {
