@@ -66,11 +66,11 @@ exports.run = async (client, message, args) => {
                 const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
                 if (score.level < curLevel) {
                   score.level++;
-                  embed = new Discord.MessageEmbed()
-                    .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
-                    .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
-                    .setColor(getRandomColor());
-                  message.channel.send(embed);
+                  //embed = new Discord.MessageEmbed()
+                  //  .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
+                  //  .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
+                  //  .setColor(getRandomColor());
+                  //message.channel.send(embed);
                 }
                 return client.setScore.run(score);
               })

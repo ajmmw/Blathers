@@ -27,10 +27,10 @@ module.exports = async (client, message) => {
   const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
   if (score.level < curLevel) {
     score.level++;
-    embed = new Discord.MessageEmbed()
-      .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`)
-      .setColor(client.getRandomColor());
-    message.channel.send(embed);
+  //  embed = new Discord.MessageEmbed()
+  //    .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`)
+  //    .setColor(client.getRandomColor());
+  //  message.channel.send(embed);
   }
   client.setScore.run(score);
 
