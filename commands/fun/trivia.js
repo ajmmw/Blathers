@@ -67,8 +67,7 @@ exports.run = async (client, message, args) => {
                 if (score.level < curLevel) {
                   score.level++;
                   //embed = new Discord.MessageEmbed()
-                  //  .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy?`)
-                  //  .setThumbnail(`https://pnkllr.net/projects/Lloid/leaf_level.gif`)
+                  //  .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy? ${client.emoji.leafGlow}`)
                   //  .setColor(getRandomColor());
                   //message.channel.send(embed);
                 }

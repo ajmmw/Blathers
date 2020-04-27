@@ -19,11 +19,15 @@ module.exports = (client) => {
 
   // Status Messages
   client.success = (channel, suc, msg) => {
-    channel.send(`<:tick:701739061131345920> **${suc}**\n${msg}`);
+    channel.send(`${client.emoji.success} **${suc}**\n${msg}`);
   };
 
   client.error = (channel, err, msg) => {
-    channel.send(`<:cross:701739087400534016> **${err}**\n${msg}`);
+    channel.send(`${client.emoji.error} **${err}**\n${msg}`);
+  };
+
+  client.warn = (channel, warn, msg) => {
+    channel.send(`${client.emoji.warning} **${warn}**\n${msg}`);
   };
 
   // Perm Levels

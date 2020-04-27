@@ -27,10 +27,10 @@ module.exports = async (client, message) => {
   const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
   if (score.level < curLevel) {
     score.level++;
-  //  embed = new Discord.MessageEmbed()
-  //    .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? <a:leafrainbow:700145511012761690>`)
-  //    .setColor(client.getRandomColor());
-  //  message.channel.send(embed);
+    //  embed = new Discord.MessageEmbed()
+    //    .setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? ${client.emoji.leafGlow}`)
+    //    .setColor(client.getRandomColor());
+    //  message.channel.send(embed);
   }
   client.setScore.run(score);
 
@@ -45,7 +45,7 @@ module.exports = async (client, message) => {
   // Check If Commands Disabled
   if (cmd.conf.enabled === false) {
     if (level[1] < 2) {
-      return client.error(
+      return client.warn(
         message.channel, 'Command Disabled', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
     }
   }
@@ -75,8 +75,10 @@ module.exports = async (client, message) => {
           timeLeft = (expirationTime - now) / 60000;
           time = 'minute(s)';
         }
-        return client.error(
-          message.channel, 'Woah There Bucko!', `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);
+        const warns = [ `Woah There Bucko!`, `I'm Not Ready For This Speed!`, `To Fast!`, `Ok Sonic`, 'VROOOM!', ];
+        const index = Math.floor(Math.random() * warns.length);
+        return client.warn(
+          message.channel, warns[index], `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);
       }
     }
   }
