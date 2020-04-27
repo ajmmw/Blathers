@@ -1,4 +1,11 @@
 exports.run = (client, message, args) => {
+	if (!arg[0]) {
+		return client.error(
+			message.channel,
+			'No Type Selected!',
+			`<@${message.author.id}> please supply either \`fish | bug | fossil | villager\`.`
+		);
+	}
 	switch (args[0].toLowerCase()) { //fix case-sensitivity
 		// Fish Lookup
 		case 'fish':
