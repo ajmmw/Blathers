@@ -77,4 +77,4 @@ for (let i = 0; i < config.permLevels.length; i++) {
 global.sentTrivia = new Set();
 
 // Discord Login
-client.login('Njc0NzUzMTk3OTc3NTAxNzU2.XjtK-g.GvxqYQ2MMZZ-xD8OALrzLFxBBgQ');
+client.login(config.token);
