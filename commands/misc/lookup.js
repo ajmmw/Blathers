@@ -104,7 +104,7 @@ exports.run = (client, message, args) => {
 				return client.error(
 					message.channel,
 					'No Villager Found!',
-					`<@${message.author.id}> there is no such villager in our Museum right now.`
+					`<@${message.author.id}> there is no such villager right now.`
 				);
 			} else
 				embed = new Discord.MessageEmbed()
@@ -122,14 +122,14 @@ exports.run = (client, message, args) => {
 			return client.error(
 				message.channel,
 				'No Type Selected!',
-				`<@${message.author.id}> please supply a type to lookup.`
+				`<@${message.author.id}> please supply either \`fish | bug | fossil | villager\`.`
 			);
 	}
 };
 
 module.exports.conf = {
 	enabled: true,
-	aliases: [ 'search' ],
+	aliases: [ 'search', 'l' ],
 	permLevel: 'User',
 	cooldown: 10
 };
