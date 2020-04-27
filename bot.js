@@ -19,6 +19,8 @@ const DBL = require('dblapi.js');
 const dbl = new DBL(config.dbl.token, { webhookPort: 5000, webhookAuth: config.dbl.auth }, client);
 
 // Get Functions
+const emoji = require('./src/emoji');
+client.emoji = emoji;
 require('./src/functions')(client);
 
 // Commands Load

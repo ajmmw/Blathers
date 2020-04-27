@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
   }
   const resp = ['It is certain', 'It is decidedly so', 'Replay hazy... Try again', 'Cannot predict now', "Don't count on it", 'Outlook not so good', 'My sources say no', 'Signs point to yes', 'As I see it, yes', 'Ask again later', 'Better not tell you now', 'Concentrate and ask again', 'Don’t count on it', 'Most likely', 'My reply is no', 'Outlook good', 'Very doubtful', 'Without a doubt', 'Yes', 'Yes – definitely'];
   const random = Math.floor(Math.random() * resp.length);
-  return message.channel.send(`🎱 | ${resp[random]}, **${message.member.displayName}**`);
+  return message.channel.send(`${client.emoji['8ball']} | ${resp[random]}, **${message.member.displayName}**`);
 };
 
 module.exports.conf = {
