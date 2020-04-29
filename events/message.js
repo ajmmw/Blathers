@@ -2,7 +2,7 @@ const cooldowns = new Discord.Collection();
 
 module.exports = async (client, message) => {
 	if (!message.guild || message.author.bot) return;
-	if (!message.channel.permissionsFor(message.guild.me).has([ 'SEND_MESSAGES', 'EMBED_LINKS' ])) return;
+	if (!message.channel.permissionsFor(message.guild.me).has(['SEND_MESSAGES', 'EMBED_LINKS'])) return;
 	//Bot is Mentioned
 	if (message.mentions.has(client.user)) {
 		if (message.mentions.everyone) return;
@@ -44,12 +44,9 @@ module.exports = async (client, message) => {
 
 	// Check If Commands Disabled
 	if (cmd.conf.enabled === false) {
-		if (level[1] < 2) {
+		if (level[1] < 10) {
 			return client.warn(
-				message.channel,
-				'Command Disabled',
-				`This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``
-			);
+				message.channel, 'Command Disabled', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
 		}
 	}
 
