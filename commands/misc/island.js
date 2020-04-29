@@ -102,8 +102,8 @@ exports.run = (client, message, args) => {
         embed = new Discord.MessageEmbed()
           .setAuthor(`${message.member.displayName}'s Island`, message.author.displayAvatarURL())
           .setColor('#e4000f')
-          .setDescription(output)
-          .setThumbnail(`https://pnkllr.net/projects/Blathers/${UserIS.hemisphere}.png`);
+          .setDescription(output);
+        if (UserIS.hemisphere != null) { embed.setThumbnail(`https://pnkllr.net/projects/Blathers/${UserIS.hemisphere}.png`) };
         return message.channel.send(embed);
       }
 
@@ -125,7 +125,7 @@ exports.run = (client, message, args) => {
           .setAuthor(`${member.displayName}'s Island`, member.user.displayAvatarURL())
           .setColor('#e4000f')
           .setDescription(output)
-          .setThumbnail(`https://pnkllr.net/projects/Blathers/${UserIS.hemisphere}.png`);
+        if (UserIS.hemisphere != null) { embed.setThumbnail(`https://pnkllr.net/projects/Blathers/${UserIS.hemisphere}.png`) };
         return message.channel.send(embed);
       }
       return client.error(message.channel, 'Unknown Member!', `Could not find a member by that name!`);

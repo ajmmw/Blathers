@@ -41,6 +41,8 @@ module.exports = {
   '!': '❗',
   '?': '❓',
   '8ball': '🎱',
+  checkMark: '✅',
+  redX: '❌',
   sucsses: '<:tick:701739061131345920>',
   error: '<:cross:701739087400534016>',
   warning: '⚠',

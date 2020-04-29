@@ -44,7 +44,7 @@ module.exports = async (client, message) => {
 
   // Check If Commands Disabled
   if (cmd.conf.enabled === false) {
-    if (level[1] < 2) {
+    if (level[1] < 10) {
       return client.warn(
         message.channel, 'Command Disabled', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
     }
