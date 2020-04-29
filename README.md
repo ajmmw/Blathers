@@ -1,5 +1,5 @@
 # Blathers - Animal Crossing Discord Bot
-[![Discord Bots](https://top.gg/api/widget/status/598007871720128544.svg)](https://top.gg/bot/598007871720128544) [![Discord Bots](https://top.gg/api/widget/servers/598007871720128544.svg?noavatar=true)](https://top.gg/bot/598007871720128544) [![Discord Bots](https://top.gg/api/widget/upvotes/598007871720128544.svg?noavatar=true)](https://top.gg/bot/598007871720128544) [![Patreon] (https://img.shields.io/badge/Patreon-Support-orange)](https://www.patreon.com/bePatron?u=68610)
+[![Discord Bots](https://top.gg/api/widget/status/598007871720128544.svg)](https://top.gg/bot/598007871720128544) [![Discord Bots](https://top.gg/api/widget/servers/598007871720128544.svg?noavatar=true)](https://top.gg/bot/598007871720128544) [![Discord Bots](https://top.gg/api/widget/upvotes/598007871720128544.svg?noavatar=true)](https://top.gg/bot/598007871720128544) [![Patreon] (https://img.shields.io/badge/Patreon-Support-orange.svg)](https://www.patreon.com/bePatron?u=68610)
 
 This bots intended use is to display information on all items from within the Animal Crossing game New Horizons.
 It can also store and display your islands Turnip Prices to be easly displayed along with your Dodo Code for easy invites.
