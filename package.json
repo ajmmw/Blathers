@@ -6,9 +6,8 @@
   "dependencies": {
     "better-sqlite3": "^6.0.1",
     "dblapi.js": "^2.4.0",
-    "discord.js": "^12.1.1",
+    "discord.js": "^12.2.0",
     "enmap": "^5.2.4",
-    "erela-discord": "^1.0.4",
     "erela.js": "^1.1.7",
     "fetch": "^1.1.0",
     "fs": "^0.0.1-security"
