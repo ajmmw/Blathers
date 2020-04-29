@@ -1,0 +1,15 @@
+{
+	"_comments": [
+		{
+			"comment1": "THE _COMMENTS FIELD IS JUST FOR ME TO LET YOU KNOW SOMETHING",
+			"comment2": "so i don't have a config.json file obviously, so i just made this. the nodes section should be moved there, however, it doesn't really matter, all of this is local and default information - nobody is able to break into the bot with this info"
+		}
+	],
+	"nodes": [
+		{
+			"host": "localhost",
+			"port": 2333,
+			"password": "youshallnotpass"
+		}
+	]
+}
