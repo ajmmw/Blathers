@@ -79,7 +79,7 @@ exports.run = async (client, message, args) => {
 	const new_horizons = 'https://www.youtube.com/playlist?list=PLtR9Q1fwfhSfRdExf8MhlmQZK1XctX-1I';
 	const new_leaf = 'https://www.youtube.com/playlist?list=PLhHcMbVmbwCerhZdxVr4odQY_ZgLXEjET';
 	const city_folk = 'https://www.youtube.com/playlist?list=PLH834K1pkcjI6DHKCawkF87zFx23TNh5T';
-	const remixes = 'https://www.youtube.com/playlist?list=PLBsm_SagFMmcW07tHgrU2uZTXsz735lu9';
+	const remixes = 'https://www.youtube.com/playlist?list=PLEH-LfJOB3zWu0UpLSiHetgYLsSpg_DDS';
 
 	var selectionembed = new Discord.MessageEmbed()
 		.setColor(client.getRandomColor())
