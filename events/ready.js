@@ -43,8 +43,8 @@ module.exports = (client) => {
 
 	setInterval(() => {
 		activitiesList = [
-			`on ${client.guilds.cache.size} islands`,
-			`AC:NH with ${client.users.cache.size} users`,
+			`on ${client.guilds.cache.size.toLocaleString()} islands`,
+			`AC:NH with ${client.users.cache.size.toLocaleString()} users`,
 			`with the developer's console`,
 			`with the ;help command`,
 			'AC:NH with PnKllr#0001',

@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
 	if (!args[0]) return;
 
 	const volume = Number(args[0]); //convert to integer
-	if (volume < 1 || volume > 100) {
+	if (volume < 1 || volume > 100 || !isFinite(args[0])) {
 		return message.reply('Please type a number between 1 and 100');
 	}
 
