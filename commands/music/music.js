@@ -48,8 +48,7 @@ exports.run = async (client, message, args) => {
 
   const permissions = voiceChannel.permissionsFor(client.user);
   if (!permissions.has('CONNECT')) return message.reply("I'm not able to connect to that VC. (invalid permissions?)");
-  if (!permissions.has('SPEAK'))
-    return message.channel.send("I'm not able to speak in that VC (invalid permissions?)");
+  if (!permissions.has('SPEAK')) return message.reply("I'm not able to speak in that VC (invalid permissions?)");
 
   let vcheck = false;
 
@@ -84,12 +83,10 @@ exports.run = async (client, message, args) => {
 
   var selectionembed = new Discord.MessageEmbed()
     .setColor(client.getRandomColor())
-    .setTitle('Playlist Selection')
-    .setDescription(
-      'React with ☀️ to play the New Horizons soundtrack\r\nReact with 🌿 to play the New Leaf soundtrack\r\nReact with 🌆 to play the City Folk soundtrack\r\nReact with 🌌 to play the Animal Crossing Remixes\r\nReact with ❌ to cancel'
-    )
+    .setTitle('-● DJ Blathers ●-')
+    .setDescription('React with the follow to play that particular playlist:\n☀️ - New Horizons Soundtrack\r\n🌿 - New Leaf Soundtrack\r\n🌆 - City Folk Soundtrack\r\n🌌 - Animal Crossing Remixes\r\n\n❌ - Cancel')
     .setFooter('Selection will end in 20 seconds.');
-  message.channel.send({ embed: selectionembed }).then(async function (message) {
+  message.channel.send(selectionembed).then(async function (message) {
     //wait for reactions
     await message.react('☀️');
     await message.react('🌿');
@@ -126,6 +123,7 @@ exports.run = async (client, message, args) => {
         playlist = remixes;
         type = 'Remixes';
       } else if (r.emoji.name == '❌') {
+        client.music.players.destroy(message.guild.id);
         return message.channel.send(`<@${scopedid}>, Soundtrack selection was cancelled.`);
       }
 
@@ -137,13 +135,10 @@ exports.run = async (client, message, args) => {
             res.playlist.tracks.forEach((track) => player.queue.add(track));
 
             var playing = new Discord.MessageEmbed()
-              .setTitle('Blathers Music')
-              .setDescription(
-                `Playing the Animal Crossing: ${type} playlist with **${res.playlist.tracks
-                  .length}** total tracks.`
-              )
+              .setTitle('-● DJ Blathers ●-')
+              .setDescription(`Playing the **Animal Crossing: ${type}** playlist with **${res.playlist.tracks.length}** total tracks.`)
               .setColor(client.getRandomColor());
-            message.channel.send({ embed: playing });
+            message.channel.send(playing);
             //start player
             if (!player.playing) player.play();
         }
@@ -155,9 +150,7 @@ exports.run = async (client, message, args) => {
       if (['time', 'cancelled'].includes(reason)) {
         if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
         if (reason == 'time') {
-          return message.channel.send(
-            `<@${scopedid}>, You've ran out of time to select a song (20 seconds).`
-          );
+          return message.channel.send(`<@${scopedid}>, You've ran out of time to select a song (20 seconds).`);
         } else {
           return message.channel.send(`<@${scopedid}>, Soundtrack selection was cancelled.`);
         }

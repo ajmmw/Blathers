@@ -43,7 +43,7 @@ exports.run = (client, message, args) => {
           client.setIsland.run(User);
           return client.success(message.channel, 'Fruit Added', `<@${message.author.id}> I've successfully added your island fruit to your Island Information.`);
         default:
-          return client.error(message.channel, 'Not Valid Fruit', `<@${message.author.id}> Please provide either \`apple | cherry | orange | peach |pear\``);
+          return client.error(message.channel, 'Not Valid Fruit', `<@${message.author.id}> Please provide either \`apple | cherry | orange | peach | pear\``);
       }
 
     // Set Island Location
