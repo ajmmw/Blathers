@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
     .addField(`Servers`, `${client.guilds.cache.size}`, true)
     .addField(`Users`, `${client.users.cache.size}`, true)
     .addField(`Developer`, `PnKllr`, true)
-    .addField(`Invite`, `[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=387072&scope=bot)`, true)
+    .addField(`Invite`, `[Click Here](https://discordapp.com/api/oauth2/authorize?client_id=598007871720128544&permissions=3533894&scope=bot)`, true)
     .addField(`Support`, `[Click Here](https://discord.gg/z6uApMZ)`, true)
     .addField(`Vote`, `[Click Here](https://top.gg/bot/598007871720128544/vote)`, true)
     .setFooter(`Uptime ${uptime(client.uptime)}`, client.user.displayAvatarURL())

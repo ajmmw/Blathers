@@ -57,8 +57,8 @@ module.exports.conf = {
 };
 
 module.exports.help = {
-	name: 'shuffle',
-	category: 'music',
-	description: 'Shuffles the current soundtrack',
-	usage: 'shuffle'
-};
+  name: 'shuffle',
+  category: 'music',
+  description: 'Shuffles the current soundtrack',
+  usage: 'shuffle'
+}; 

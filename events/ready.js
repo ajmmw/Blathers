@@ -4,32 +4,24 @@ const { nodes } = require('../lavanodes.json');
 module.exports = (client) => {
   console.log("Museum Open");
 
-  /* - Lavalink // Erela.js Events - */
-
-	client.music = new ErelaClient(client, nodes) //lavalink client creation :)
-  .on('nodeError', console.error) // if anything errors, this will log it
+	client.music = new ErelaClient(client, nodes)
+  .on('nodeError', console.error)
   .on('nodeConnect', () => console.log('Lavalink node created.'))
   .on('socketClosed', (player) => {
-    //if a connection is abruptly closed (channel deleted, bot kicked, etc.), this will close the connection and prevent un-needed streaming
     return client.music.players.destroy(player.guild.id);
   })
   .on('trackStart', ({ textChannel }, { title, duration, author }) => {
-    //track started, we'll create an embed here. title, duration, and author are parameters that can be used if you want for the current track that's playing
+    // Track Embed
   })
   .on('queueEnd', (player) => {
-    //queue's up, do we have any more music to play? let's check
     setTimeout(() => {
-      //wait 4 minutes to see if anything else starts playing after queue ends
       if (player.queue.length == 0) {
-        //check queue length
-        return client.music.players.destroy(player.guild.id); //nothing else added, let's dip
+        return client.music.players.destroy(player.guild.id);
       } else {
-        return; //more music started playing, let's forget this ever happened
+        return;
       }
-    }, 240000); //4 minutes
+    }, 240000);
   });
-
-  
 
   //User Scores
   client.getScore = UserSQL.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
@@ -49,15 +41,14 @@ module.exports = (client) => {
   client.getFossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ?");
   client.getVillager = DataSQL.prepare("SELECT * FROM villager WHERE name LIKE ?");
 
-  activitiesList = [
-    `on ${client.guilds.cache.size} islands`,
-    `AC:NH with ${client.users.cache.size} users`,
-    `with the developer's console`,
-    `with the ;help command`,
-    'AC:NH with PnKllr#0001',
-  ];
-
   setInterval(() => {
+    activitiesList = [
+      `on ${client.guilds.cache.size} islands`,
+      `AC:NH with ${client.users.cache.size} users`,
+      `with the developer's console`,
+      `with the ;help command`,
+      'AC:NH with PnKllr#0001',
+    ];
     index = Math.floor(Math.random() * activitiesList.length);
 
     // Setting activity
