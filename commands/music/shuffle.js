@@ -51,14 +51,14 @@ exports.run = (client, message, args) => {
 
 module.exports.conf = {
 	enabled: true,
-	aliases: [ 'mix' ],
+	aliases: ['mix'],
 	permLevel: 'User',
 	cooldown: 10
 };
 
 module.exports.help = {
-  name: 'shuffle',
-  category: 'music',
-  description: 'Shuffles the current soundtrack',
-  usage: 'shuffle'
+	name: 'shuffle',
+	category: 'music',
+	description: 'Shuffles the current soundtrack',
+	usage: 'shuffle'
 }; 

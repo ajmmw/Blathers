@@ -1,73 +1,73 @@
 exports.run = (client, message, args) => {
-  const nth = function (d) {
-    if (d > 3 && d < 21) return 'th';
-    switch (d % 10) {
-      case 1: return "st";
-      case 2: return "nd";
-      case 3: return "rd";
-      default: return "th";
-    }
-  }
-  const today = new Date();
-  const date = today.getDate();
-  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][today.getMonth()];
+	const nth = function (d) {
+		if (d > 3 && d < 21) return 'th';
+		switch (d % 10) {
+			case 1: return "st";
+			case 2: return "nd";
+			case 3: return "rd";
+			default: return "th";
+		}
+	}
+	const today = new Date();
+	const date = today.getDate();
+	const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][today.getMonth()];
 
-  // Birthdays For Today
-  if (args.length === 0) {
-    villager = DataSQL.prepare("SELECT * FROM villager WHERE birthday = ?").get(`${month} ${date}${nth(date)}`);
+	// Birthdays For Today
+	if (args.length === 0) {
+		villager = DataSQL.prepare("SELECT * FROM villager WHERE birthday = ?").get(`${month} ${date}${nth(date)}`);
 
-    if (!villager) {
-      return client.error(message.channel, 'No Birthdays Today', `No villager is having a birthday today!`);
-    }
+		if (!villager) {
+			return client.error(message.channel, 'No Birthdays Today', `No villager is having a birthday today!`);
+		}
 
-    message.channel.send(`**__:tada: Birthdays for ${month} ${date}${nth(date)} :tada:__**`);
-    const bdays = DataSQL.prepare("SELECT * FROM villager WHERE birthday = ?;").all(`${month} ${date}${nth(date)}`);
-    for (const data of bdays) {
-      embed = new Discord.MessageEmbed()
-        .setAuthor(`${data.name}`, null)
-        .addField(`Gender`, data.gender, true)
-        .addField(`Personality`, data.personality, true)
-        .addField(`Species`, data.species, true)
-        .addField(`Birthday`, data.birthday, true)
-        .addField(`Sign`, data.sign, true)
-        .addField(`Phrase`, data.phrase, true)
-        .setThumbnail(data.portrait)
-        .setColor(client.getRandomColor());
-      message.channel.send(embed);
-    }
-  }
+		message.channel.send(`**__:tada: Birthdays for ${month} ${date}${nth(date)} :tada:__**`);
+		const bdays = DataSQL.prepare("SELECT * FROM villager WHERE birthday = ?;").all(`${month} ${date}${nth(date)}`);
+		for (const data of bdays) {
+			embed = new Discord.MessageEmbed()
+				.setAuthor(`${data.name}`, null)
+				.addField(`Gender`, data.gender, true)
+				.addField(`Personality`, data.personality, true)
+				.addField(`Species`, data.species, true)
+				.addField(`Birthday`, data.birthday, true)
+				.addField(`Sign`, data.sign, true)
+				.addField(`Phrase`, data.phrase, true)
+				.setThumbnail(data.portrait)
+				.setColor(client.getRandomColor());
+			message.channel.send(embed);
+		}
+	}
 
-  // Birthdays For Month
-  if (args.length > 0) {
-    value = args.join(' ');
-    villager = DataSQL.prepare("SELECT * FROM villager WHERE birthday LIKE ?").get(`%${value}%`);
+	// Birthdays For Month
+	if (args.length > 0) {
+		value = args.join(' ');
+		villager = DataSQL.prepare("SELECT * FROM villager WHERE birthday LIKE ?").get(`%${value}%`);
 
-    if (!villager) {
-      return client.error(message.channel, `No Birthdays for ${value}`, `No villager is having a birthday!`);
-    }
+		if (!villager) {
+			return client.error(message.channel, `No Birthdays for ${value}`, `No villager is having a birthday!`);
+		}
 
-    message.channel.send(`**__:tada: Birthdays for ${value} :tada:__**`);
-    const bdays = DataSQL.prepare("SELECT * FROM villager WHERE birthday LIKE ?").all(`%${value}%`);
+		message.channel.send(`**__:tada: Birthdays for ${value} :tada:__**`);
+		const bdays = DataSQL.prepare("SELECT * FROM villager WHERE birthday LIKE ?").all(`%${value}%`);
 
-    let output = `= Birthdays for ${value} =\n\n`;
-    for (const data of bdays) {
-      output += `${data.name}${' '.repeat(10 - data.name.length)} :: ${data.birthday}\n`;
-    }
-    return message.channel.send(output, { code: 'asciidoc', split: { char: '\u200b' } })
-  }
+		let output = `= Birthdays for ${value} =\n\n`;
+		for (const data of bdays) {
+			output += `${data.name}${' '.repeat(10 - data.name.length)} :: ${data.birthday}\n`;
+		}
+		return message.channel.send(output, { code: 'asciidoc', split: { char: '\u200b' } })
+	}
 };
 
 module.exports.conf = {
-  enabled: true,
-  aliases: ['bday'],
-  permLevel: 'User',
-  cooldown: 10
+	enabled: true,
+	aliases: ['bday'],
+	permLevel: 'User',
+	cooldown: 10
 };
 
 module.exports.help = {
-  name: 'birthday',
-  category: 'misc',
-  description: 'Displays todays birthdays',
-  usage: 'bday <month|day>',
-  details: '<month|day> => Show all birthdays in that month or day.'
+	name: 'birthday',
+	category: 'misc',
+	description: 'Displays todays birthdays',
+	usage: 'bday <month|day>',
+	details: '<month|day> => Show all birthdays in that month or day.'
 };

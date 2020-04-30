@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 
 module.exports.conf = {
 	enabled: true,
-	aliases: [ 'np', 'nowplaying', 'playing' ],
+	aliases: ['np', 'nowplaying', 'playing'],
 	permLevel: 'User',
 	cooldown: 10
 };

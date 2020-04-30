@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 
 module.exports.conf = {
 	enabled: true,
-	aliases: [ 'vol' ],
+	aliases: ['vol'],
 	permLevel: 'User',
 	cooldown: 10
 };
