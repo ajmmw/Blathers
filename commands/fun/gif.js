@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-  fetch(`https://api.giphy.com/v1/gifs/random?api_key=${client.config.giphyAPI}&tag=animalcrossing`)
+  fetch(`https://api.giphy.com/v1/gifs/random?api_key=${client.config.giphyAPI}&tag=animalcrossing&rating=PG-13`)
     .then(res => res.json()).then(body => {
       embed = new Discord.MessageEmbed()
         .setImage(body.data.image_original_url)
