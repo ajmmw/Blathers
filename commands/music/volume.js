@@ -14,10 +14,11 @@ exports.run = (client, message, args) => {
 	}
 
 	try {
+		bar = Math.ceil(volume / 100 * 10);
 		player.setVolume(volume); //set player volume
 		let embed = new Discord.MessageEmbed()
-			.setTitle('Blathers Music')
-			.setDescription(`The volume has been changed to **${volume}**`)
+			.setTitle('-● DJ Blathers ●-')
+			.setDescription(`${'▓'.repeat(bar)}${'░'.repeat(10 - bar)} **VOLUME ${volume}%**`)
 			.setColor(client.getRandomColor());
 		return message.channel.send({ embed: embed });
 	} catch (e) {

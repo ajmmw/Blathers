@@ -11,10 +11,8 @@ exports.run = (client, message, args) => {
 		return message.channel.send('You must be in the VC to use this command');
 
 	let embed = new Discord.MessageEmbed()
-		.setAuthor('Blathers Music', client.user.displayAvatarURL())
-		.setDescription(
-			`▶️ Currently playing **[${title}](${url}) (${Utils.formatTime(duration, true)})** by **${author}**`
-		)
+		.setTitle('-● DJ Blathers ●-')
+		.setDescription(`▶️ Currently playing **[${title}](${url}) (${Utils.formatTime(duration, true)})** by **${author}**`)
 		.setColor(client.getRandomColor());
 	return message.channel.send({ embed: embed });
 };

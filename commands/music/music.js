@@ -141,6 +141,7 @@ exports.run = async (client, message, args) => {
 						message.channel.send(playing);
 						//start player
 						if (!player.playing) player.play();
+						player.setVolume(10);
 				}
 			});
 		});
