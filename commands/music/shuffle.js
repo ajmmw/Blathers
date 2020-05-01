@@ -29,20 +29,18 @@ exports.run = (client, message, args) => {
 	const voiceChannel = message.member.voice.channel;
 	const player = client.music.players.get(message.guild.id);
 
-	if (!player || !player.queue[0]) return message.reply("There aren't any tracks currently playing.");
-	if (!voiceChannel) return message.channel.send('You must be in the VC to use this command');
-	if (voiceChannel.id !== player.voiceChannel.id)
-		return message.channel.send('You must be in the VC to use this command');
+	if (!player || !player.queue[0]) return client.error(message.channel, 'No Playlist Playing', `Use \`;play\` to beguin selection.`);
+	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (voiceChannel.id !== player.voiceChannel.id) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	try {
 		if (player.queue.length > 2) {
 			shuffle({ array: player.queue, times: 5 }).then((queue) => {
 				player.queue = queue; //shuffle ittttt
 			});
-
-			return message.react('🔀');
+			return message.channel.send(`🔀 **SHUFFLE ACTIVE**\nPlaylist now shuffled.`);
 		} else {
-			message.reply('The queue only has one song in it.');
+			client.error(message.channel, 'Not Enough Songs', `The queue only has one song left in it.`);
 		}
 	} catch (e) {
 		console.error(e);

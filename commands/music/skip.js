@@ -4,18 +4,18 @@ exports.run = (client, message, args) => {
 
 	var mcheck = true;
 
-	if (!player || !player.queue[0]) return message.reply("There aren't any tracks currently playing.");
-	if (!voiceChannel) return message.channel.send('You must be in the VC to use this command');
-	if (voiceChannel.id !== player.voiceChannel.id)
-		return message.channel.send('You must be in the VC to use this command');
+	if (!player || !player.queue[0]) return client.error(message.channel, 'No Playlist Playing', `Use \`;play\` to beguin selection.`);
+	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (voiceChannel.id !== player.voiceChannel.id) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	if (player.queue.length == 1) {
 		//check if only 1 song is left
-		bot.music.players.destroy(message.guild.id); //if there is, bot leaves
+		message.channel.send('⏹️ **STOPPED**\nThats the end of the playlist! Thanks for listening.');
+		client.music.players.destroy(message.guild.id); //if there is, bot leaves
 		mcheck = false;
 	}
 
-	message.react('⏭️');
+	message.channel.send(`⏭️ **SKIPPED**`);
 	if (mcheck) player.stop(); //skips current track
 };
 

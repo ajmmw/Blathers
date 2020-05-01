@@ -3,12 +3,11 @@ exports.run = (client, message, args) => {
 	const player = client.music.players.get(message.guild.id);
 
 	if (!player) return;
-	if (!voiceChannel) return message.channel.send('You must be in the VC to use this command');
-	if (voiceChannel.id !== player.voiceChannel.id)
-		return message.channel.send('You must be in the VC to use this command');
+	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (voiceChannel.id !== player.voiceChannel.id) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	client.music.players.destroy(message.guild.id); //bot go bye bye
-	message.react('👋');
+	message.channel.send(`⏹️ **STOPPED**\nThanks for listening!`);
 };
 
 module.exports.conf = {

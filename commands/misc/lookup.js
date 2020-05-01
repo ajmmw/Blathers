@@ -11,9 +11,9 @@ exports.run = (client, message, args) => {
 				return client.error(message.channel, 'No Fish Found!', `<@${message.author.id}> there is no such Fish in our Museum right now.`);
 			} else
 				embed = new Discord.MessageEmbed()
-					.setAuthor(`${Fish.name}`, null)
+					.setAuthor(`${Fish.name.toProperCase()}`, null)
 					.setDescription(`\`\`\`${Fish.quote}\`\`\``)
-					.addField(`Price`, `${Fish.price} <:bells:698107158805348373>`, true)
+					.addField(`Price`, `${Fish.price.toLocaleString()} <:bells:698107158805348373>`, true)
 					.addField(`Shadow Size`, `${Fish.size}`, true)
 					.addField(`Time of Day`, `${Fish.time}`, true)
 					.addField(`Location`, `${Fish.location}`, true)
@@ -34,9 +34,9 @@ exports.run = (client, message, args) => {
 				return client.error(message.channel, 'No Bug Found!', `<@${message.author.id}> there is no such bug in our Museum right now.`);
 			} else
 				embed = new Discord.MessageEmbed()
-					.setAuthor(`${Bug.name}`, null)
+					.setAuthor(`${Bug.name.toProperCase()}`, null)
 					.setDescription(`\`\`\`${Bug.quote}\`\`\``)
-					.addField(`Price`, `${Bug.price} <:bells:698107158805348373>`, true)
+					.addField(`Price`, `${Bug.price.toLocaleString()} <:bells:698107158805348373>`, true)
 					.addField(`Time of Day`, `${Bug.time}`, true)
 					.addField(`Location`, `${Bug.location}`, true)
 					.addField(`Available (Northern Hemisphere)`, `${Bug.nh}`, false)
@@ -57,9 +57,9 @@ exports.run = (client, message, args) => {
 				return client.error(message.channel, 'No Fossil Found!', `<@${message.author.id}> there is no such fossil in our Museum right now.`);
 			} else
 				embed = new Discord.MessageEmbed()
-					.setAuthor(`${Fossil.name}`, null)
+					.setAuthor(`${Fossil.name.toProperCase()}`, null)
 					.setDescription(`\`\`\`${Fossil.quote}\`\`\``)
-					.addField(`Price`, `${Fossil.price} <:bells:698107158805348373>`, true)
+					.addField(`Price`, `${Fossil.price.toLocaleString()} <:bells:698107158805348373>`, true)
 					.setImage(Fossil.image)
 					.setColor(client.getRandomColor());
 			return message.channel.send(embed);
@@ -76,7 +76,7 @@ exports.run = (client, message, args) => {
 				return client.error(message.channel, 'No Villager Found!', `<@${message.author.id}> there is no such villager right now.`);
 			} else
 				embed = new Discord.MessageEmbed()
-					.setAuthor(`${Villager.name}`, null)
+					.setAuthor(`${Villager.name.toProperCase()}`, null)
 					.addField(`Gender`, Villager.gender, true)
 					.addField(`Personality`, Villager.personality, true)
 					.addField(`Species`, Villager.species, true)

@@ -4,7 +4,7 @@ async function _continue(msg) {
 	return new Promise(function (resolve, reject) {
 		let scopedid = msg.author.id;
 		msg.channel
-			.send(`<@${scopedid}>, I'm already playing a soundtrack, would you like to change it?`)
+			.send(`⚠ **DJ Blathers Already Live**\nA playlist is already playing, would you like to change it?`)
 			.then(async function (message) {
 				await message.react('✅');
 				message.react('❌');
@@ -18,21 +18,15 @@ async function _continue(msg) {
 					if (r.emoji.name == '✅') {
 						resolve(false);
 					} else if (r.emoji.name == '❌') {
-						message.channel.send(`<@${scopedid}>, Cancelling selection.`);
+						message.channel.send(`<:cross:701739087400534016> **Selection Canceled**`);
 						resolve(true);
 					}
 				});
 
 				collector.on('end', (_, reason) => {
 					if (['time', 'cancelled'].includes(reason)) {
-						if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
-						if (reason == 'time') {
-							message.channel.send(`<@${scopedid}>, Timed out... (15 seconds)`);
-							resolve(true);
-						} else {
-							message.channel.send(`<@${scopedid}>, Timed out... (15 seconds)`);
-							resolve(true);
-						}
+						message.channel.send(`⚠ **Selection Timed Out**`);
+						resolve(true);
 					}
 				});
 			});
@@ -44,11 +38,11 @@ exports.run = async (client, message, args) => {
 	let scopedauthor = message.author;
 
 	const voiceChannel = message.member.voice.channel;
-	if (!voiceChannel) return message.reply('You need to be in a voice channel to use this command.');
+	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	const permissions = voiceChannel.permissionsFor(client.user);
-	if (!permissions.has('CONNECT')) return message.reply("I'm not able to connect to that VC. (invalid permissions?)");
-	if (!permissions.has('SPEAK')) return message.reply("I'm not able to speak in that VC (invalid permissions?)");
+	if (!permissions.has('CONNECT')) return client.warn(message.channel, 'Invalid Permission', `Unable to connect to that Voice Channel.`);
+	if (!permissions.has('SPEAK')) return client.warn(message.channel, 'Invalid Permission', `Unable to speak in that Voice Channel.`);
 
 	let vcheck = false;
 
@@ -124,7 +118,7 @@ exports.run = async (client, message, args) => {
 				type = 'Remixes';
 			} else if (r.emoji.name == '❌') {
 				client.music.players.destroy(message.guild.id);
-				return message.channel.send(`<@${scopedid}>, Soundtrack selection was cancelled.`);
+				return message.channel.send(`${client.emoji.error} **Selection Canceled**`);
 			}
 
 			client.music.search(playlist, scopedauthor).then(async (res) => {
@@ -150,11 +144,7 @@ exports.run = async (client, message, args) => {
 			//timed out :(
 			if (['time', 'cancelled'].includes(reason)) {
 				if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
-				if (reason == 'time') {
-					return message.channel.send(`<@${scopedid}>, You've ran out of time to select a song (20 seconds).`);
-				} else {
-					return message.channel.send(`<@${scopedid}>, Soundtrack selection was cancelled.`);
-				}
+					return message.channel.send(`${client.emoji.warning} **Selection Timed Out**`);
 			}
 		});
 	});
