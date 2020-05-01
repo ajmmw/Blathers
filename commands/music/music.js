@@ -133,6 +133,7 @@ exports.run = async (client, message, args) => {
 							.setDescription(`Playing the **Animal Crossing: ${type}** playlist with **${res.playlist.tracks.length}** total tracks.`)
 							.setColor(client.getRandomColor());
 						message.channel.send(playing);
+						message.channel.send(`▶️ **Playlist Selected**\nPlaying the \`Animal Crossing: ${type}\` playlist with \`${res.playlist.tracks.length}\` total tracks.`);
 						//start player
 						if (!player.playing) player.play();
 						player.setVolume(10);

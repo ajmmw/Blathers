@@ -10,9 +10,6 @@ module.exports = (client) => {
 		.on('socketClosed', (player) => {
 			return client.music.players.destroy(player.guild.id);
 		})
-		.on('trackStart', ({ textChannel }, { title, duration, author }) => {
-			// Track Embed
-		})
 		.on('queueEnd', (player) => {
 			setTimeout(() => {
 				if (player.queue.length == 0) {
