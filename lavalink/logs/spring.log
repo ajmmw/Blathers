@@ -1,0 +1,667 @@
+2020-04-29 20:52:43.246  WARN 14928 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-04-29 20:52:43.260 ERROR 14928 --- [main] lavalink.server.Launcher                 : Application failed
+
+java.lang.UnsupportedClassVersionError: lavalink/server/info/AppInfo has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_241]
+	at java.lang.ClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.security.SecureClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.access$100(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[na:1.8.0_241]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.findClass(Unknown Source) ~[na:1.8.0_241]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_241]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:93) ~[Lavalink.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_241]
+	at lavalink.server.Launcher.getVersionInfo(Launcher.kt:50) [classes!/:na]
+	at lavalink.server.Launcher.getVersionInfo$default(Launcher.kt:49) [classes!/:na]
+	at lavalink.server.Launcher$main$1.onApplicationEvent(Launcher.kt:118) ~[classes!/:na]
+	at lavalink.server.Launcher$main$1.onApplicationEvent(Launcher.kt:43) ~[classes!/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) [classes!/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_241]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_241]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_241]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_241]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) [Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) [Lavalink.jar:na]
+
+2020-04-29 20:52:43.263 ERROR 14928 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.UnsupportedClassVersionError: lavalink/server/info/AppInfo has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_241]
+	at java.lang.ClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.security.SecureClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.defineClass(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.access$100(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[na:1.8.0_241]
+	at java.net.URLClassLoader$1.run(Unknown Source) ~[na:1.8.0_241]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_241]
+	at java.net.URLClassLoader.findClass(Unknown Source) ~[na:1.8.0_241]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_241]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:93) ~[Lavalink.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_241]
+	at lavalink.server.Launcher.getVersionInfo(Launcher.kt:50) [classes!/:na]
+	at lavalink.server.Launcher.getVersionInfo$default(Launcher.kt:49) [classes!/:na]
+	at lavalink.server.Launcher$main$1.onApplicationEvent(Launcher.kt:118) ~[classes!/:na]
+	at lavalink.server.Launcher$main$1.onApplicationEvent(Launcher.kt:43) ~[classes!/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:342) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) [classes!/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_241]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_241]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_241]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_241]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) [Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) [Lavalink.jar:na]
+
+2020-04-29 20:54:34.484  INFO 276 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.3.1
+	Build:          997
+	Build time:     25.03.2020 12:30:43 UTC
+	Branch          master
+	Commit:         29f68ba
+	Commit time:    25.03.2020 12:28:48 UTC
+	JVM:            11.0.5
+	Lavaplayer      1.3.38
+
+2020-04-29 20:54:34.545  INFO 276 --- [main] lavalink.server.Launcher                 : Starting Launcher on AZURILEX with PID 276 (C:\Users\Brenden\Documents\BlathersBot\Blathers\Blathers\lavalink\Lavalink.jar started by Brenden in C:\Users\Brenden\Documents\BlathersBot\Blathers\Blathers\lavalink)
+2020-04-29 20:54:34.546  INFO 276 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2020-04-29 20:54:34.604  WARN 276 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-04-29 20:54:35.464  WARN 276 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-04-29 20:54:35.483  INFO 276 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-04-29 20:54:35.484  INFO 276 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 911 ms
+2020-04-29 20:54:35.712  WARN 276 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2020-04-29 20:54:35.719  INFO 276 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Windows 10, Arch: amd64
+2020-04-29 20:54:35.719  INFO 276 --- [main] l.s.c.AudioSendFactoryConfiguration      : JDA-NAS supported system detected. Enabled native audio sending.
+2020-04-29 20:54:35.720  INFO 276 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting buffer to 400ms
+2020-04-29 20:54:35.720  INFO 276 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting playlist load limit to 6
+2020-04-29 20:54:35.921  INFO 276 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2020-04-29 20:54:36.158  INFO 276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-29 20:54:36.364  INFO 276 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-04-29 20:54:36.382  INFO 276 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-04-29 20:54:36.431  INFO 276 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2020-04-29 20:54:36.434  INFO 276 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.257 seconds (JVM running for 2.634)
+2020-04-29 20:57:03.081  INFO 276 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-29 20:57:03.081  INFO 276 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-29 20:57:03.086  INFO 276 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-04-29 20:57:03.100  INFO 276 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18268
+2020-04-29 20:57:03.182  INFO 276 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18268
+2020-04-29 20:57:22.742  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18268 -- CloseStatus[code=1006, reason=]
+2020-04-29 20:57:22.742  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 20:57:50.760  INFO 276 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18282
+2020-04-29 20:57:50.764  INFO 276 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18282
+2020-04-29 20:57:55.946  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18282 -- CloseStatus[code=1006, reason=]
+2020-04-29 20:57:55.946  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 20:58:42.725  INFO 276 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18297
+2020-04-29 20:58:42.734  INFO 276 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18297
+2020-04-29 20:58:45.283  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18297 -- CloseStatus[code=1006, reason=]
+2020-04-29 20:58:45.284  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 20:59:01.731  INFO 276 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18305
+2020-04-29 20:59:01.734  INFO 276 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18305
+2020-04-29 20:59:03.919  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18305 -- CloseStatus[code=1006, reason=]
+2020-04-29 20:59:03.920  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 20:59:20.488  INFO 276 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18315
+2020-04-29 20:59:20.493  INFO 276 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18315
+2020-04-29 20:59:28.409  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18315 -- CloseStatus[code=1006, reason=]
+2020-04-29 20:59:28.409  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:00:30.715  INFO 276 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18330
+2020-04-29 21:00:30.720  INFO 276 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18330
+2020-04-29 21:00:36.865  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"8dc1ea0d5816f92996eff259ee447af8","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"93349a956160fd6d","guild_id":"661026488757518336","endpoint":"us-west596.discord.media:80"}}
+2020-04-29 21:00:36.902  INFO 276 --- [parallel-7] com.jcabi.manifests.Manifests            : 73 attributes loaded from 84 stream(s) in 25ms, 73 saved, 1240 ignored: ["Ant-Version", "Archiver-Version", "Automatic-Module-Name", "Bnd-LastModified", "Build-Jdk", "Build-Jdk-Spec", "Build-Time", "Built-By", "Bundle-ActivationPolicy", "Bundle-Activator", "Bundle-Category", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-NativeCode", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "Copyright", "Created-By", "Export-Package", "Extension-Name", "Git-Revision", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "Jar-Name", "Jar-Version", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Magma-Version", "Main-Class", "Manifest-Version", "Multi-Release", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Private-Package", "Provide-Capability", "Require-Bundle", "Require-Capability", "Scm-Connection", "Scm-Revision", "Scm-Url", "Specification-Title", "Specification-Vendor", "Specification-Version", "Spring-Boot-Classes", "Spring-Boot-Lib", "Spring-Boot-Version", "Start-Class", "Tool", "X-Compile-Source-JDK", "X-Compile-Target-JDK", "url"]
+2020-04-29 21:00:44.185  INFO 276 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:00:45.204  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:00:45.225  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:00:47.902  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18330 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:00:47.903  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 21:01:55.110  INFO 276 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18348
+2020-04-29 21:01:55.115  INFO 276 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18348
+2020-04-29 21:16:08.663  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18348 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:16:08.664  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:16:10.279  INFO 276 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18903
+2020-04-29 21:16:10.284  INFO 276 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18903
+2020-04-29 21:16:26.046  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18903 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:16:26.047  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:17:27.814  INFO 276 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:18922
+2020-04-29 21:17:27.819  INFO 276 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:18922
+2020-04-29 21:17:34.150  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"2a8b4db7dfc3f796638e6d6e380da243","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"1c1af5f958544ad1","guild_id":"661026488757518336","endpoint":"us-west644.discord.media:80"}}
+2020-04-29 21:17:37.906  INFO 276 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:17:38.658  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:17:38.663  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:17:41.745  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 21:17:44.577  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"2a8b4db7dfc3f796638e6d6e380da243","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"5b5c1f3026574678","guild_id":"661026488757518336","endpoint":"us-west644.discord.media:80"}}
+2020-04-29 21:17:50.239  INFO 276 --- [XNIO-1 task-14] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:17:50.945  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:17:50.949  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:17:52.899  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 21:22:03.553  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:18922 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:22:03.553  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:22:04.890  INFO 276 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19000
+2020-04-29 21:22:04.895  INFO 276 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19000
+2020-04-29 21:22:10.936  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"50571798cc497a85c38298857fed660e","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"8e6885ed9faeb3f7","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:22:15.910  INFO 276 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:22:16.799  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:22:16.804  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:24:28.442  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAGWQAALcVFxQUVNNFQ3MEUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xUXFBRU00VDcwRQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 21:25:41.004  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19000 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:25:41.004  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 21:25:42.301  INFO 276 --- [XNIO-1 task-19] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19069
+2020-04-29 21:25:42.304  INFO 276 --- [XNIO-1 task-19] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19069
+2020-04-29 21:26:05.521  INFO 276 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"b96c803c348b73290227c2379c7f5738","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"8e6885ed9faeb3f7","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:26:09.850  INFO 276 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:26:10.570  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:26:10.575  INFO 276 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:28:22.291  INFO 276 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAGWQAALcVFxQUVNNFQ3MEUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xUXFBRU00VDcwRQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 21:29:22.222  INFO 276 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19069 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:29:22.223  INFO 276 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 21:29:23.962  INFO 276 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19115
+2020-04-29 21:29:23.966  INFO 276 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19115
+2020-04-29 21:29:28.247  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"sessionId":"191328a7819b195b7565747202421368","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"8e6885ed9faeb3f7","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:29:34.284  INFO 276 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:29:34.578  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Leaf OST
+2020-04-29 21:29:34.582  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIAJUFuaW1hbCBDcm9zc2luZzogTmV3IExlYWYgT1NUIC0gMTIgQU0AFlZpZGVvIEdhbWUgU291bmR0cmFja3MAAAAAAAK7OAALeU1zRUV4cjdyT2cAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj15TXNFRXhyN3JPZwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 21:29:43.120  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 21:32:05.712  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19115 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:32:05.713  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:32:07.358  INFO 276 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19224
+2020-04-29 21:32:07.362  INFO 276 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19224
+2020-04-29 21:32:11.394  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"450b4288ae0279e39a835d145af22351","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"5c28d5824cdb7246","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:32:16.188  INFO 276 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:32:16.887  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:32:16.892  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:34:28.539  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAGWQAALcVFxQUVNNFQ3MEUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xUXFBRU00VDcwRQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 21:36:11.532  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAqQIASkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChGdWxsIFZlcnNpb24pAAVDZXZhbgAAAAAAAfQAAAsyR2hoVl9XR3NhMAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTJHaGhWX1dHc2EwAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 21:38:18.807  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMTI6MDAgUE0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA7sUAALN0tBSVNnbDctQlEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj03S0FJU2dsNy1CUQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 21:44:03.315  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19224 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:44:03.316  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 21:44:04.517  INFO 276 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19302
+2020-04-29 21:44:04.520  INFO 276 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19302
+2020-04-29 21:44:13.131  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"d27eb785be8944898197af9ef88fcd03","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"5c28d5824cdb7246","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:44:18.200  INFO 276 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:44:19.030  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:44:19.035  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:46:15.822  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19302 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:46:15.823  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 21:46:17.733  INFO 276 --- [XNIO-1 task-31] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19326
+2020-04-29 21:46:17.738  INFO 276 --- [XNIO-1 task-31] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19326
+2020-04-29 21:46:21.910  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"0dfe7f7bde98d8f09066593a896b9e3f","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"5c28d5824cdb7246","guild_id":"661026488757518336","endpoint":"us-west67.discord.media:80"}}
+2020-04-29 21:46:27.028  INFO 276 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:46:27.703  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:46:27.707  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 21:46:53.942  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 21:57:54.397  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19326 -- CloseStatus[code=1006, reason=]
+2020-04-29 21:57:54.397  INFO 276 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 21:57:57.349  INFO 276 --- [XNIO-1 task-34] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19433
+2020-04-29 21:57:57.354  INFO 276 --- [XNIO-1 task-34] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19433
+2020-04-29 21:58:19.602  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"16a2ab9c8bde254568763a1e8282bc55","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"9be46964ecbe3913","guild_id":"661026488757518336","endpoint":"us-west625.discord.media:80"}}
+2020-04-29 21:58:24.306  INFO 276 --- [XNIO-1 task-35] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 21:58:25.250  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 21:58:25.254  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:00:00.667  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19433 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:00:00.668  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 22:00:01.889  INFO 276 --- [XNIO-1 task-37] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19484
+2020-04-29 22:00:01.893  INFO 276 --- [XNIO-1 task-37] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19484
+2020-04-29 22:00:25.927  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"sessionId":"6fb04a69fe6c59f73158a9f34f2bd6db","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"ab3994e6393ee732","guild_id":"661026488757518336","endpoint":"us-west514.discord.media:80"}}
+2020-04-29 22:00:28.029 ERROR 276 --- [XNIO-18 I/O-1] s.n.m.impl.connections.AudioWebSocket    : Exception in websocket connection, closing. Channel state is Websocket Channel is null
+
+java.lang.IllegalStateException: Failed to connect to wss://us-west514.discord.media/?v=4
+	at space.npstr.magma.impl.connections.hax.ClosingUndertowWebSocketClient$1.handleFailed(ClosingUndertowWebSocketClient.java:79) ~[impl-0.12.5.jar!/:na]
+	at org.xnio.IoFuture$HandlingNotifier.notify(IoFuture.java:215) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture$1.run(AbstractIoFuture.java:211) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils$2.execute(IoUtils.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.runNotifier(AbstractIoFuture.java:354) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.runAllNotifiers(AbstractIoFuture.java:233) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.setException(AbstractIoFuture.java:251) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.FutureResult.setException(FutureResult.java:89) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.websockets.client.WebSocketClient$ConnectionBuilder$2.notify(WebSocketClient.java:342) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.AbstractIoFuture$1.run(AbstractIoFuture.java:211) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils$2.execute(IoUtils.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.runNotifier(AbstractIoFuture.java:354) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.runAllNotifiers(AbstractIoFuture.java:233) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.AbstractIoFuture.setException(AbstractIoFuture.java:251) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.FutureResult.setException(FutureResult.java:89) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.http.HttpUpgrade$HttpUpgradeState$UpgradeResultListener.handleEvent(HttpUpgrade.java:471) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.http.HttpUpgrade$HttpUpgradeState$UpgradeResultListener.handleEvent(HttpUpgrade.java:400) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.ReadReadyHandler$ChannelListenerHandler.readReady(ReadReadyHandler.java:66) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.protocols.ssl.SslConduit$SslReadReadyHandler.readReady(SslConduit.java:1176) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.nio.NioSocketConduit.handleReady(NioSocketConduit.java:88) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:561) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+Caused by: org.xnio.http.UpgradeFailedException: Invalid response code 525
+	... 7 common frames omitted
+
+2020-04-29 22:00:30.283  INFO 276 --- [XNIO-1 task-38] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:00:31.062  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:00:31.067  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:00:43.286  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:00:46.379  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19484 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:00:46.379  INFO 276 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:00:47.856  INFO 276 --- [XNIO-1 task-40] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19498
+2020-04-29 22:00:47.859  INFO 276 --- [XNIO-1 task-40] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19498
+2020-04-29 22:01:02.595  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"cdcaa8fd55ccd225c3b48a450d848c8c","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"365a260026692f65","guild_id":"661026488757518336","endpoint":"us-west511.discord.media:80"}}
+2020-04-29 22:01:07.607  INFO 276 --- [XNIO-1 task-41] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:01:08.331  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:01:08.335  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:01:47.449  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:02:18.399  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19498 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:02:18.399  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:02:27.083  INFO 276 --- [XNIO-1 task-43] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19519
+2020-04-29 22:02:27.087  INFO 276 --- [XNIO-1 task-43] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19519
+2020-04-29 22:02:32.400  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"badf8edc42c9ab28","guild_id":"661026488757518336","endpoint":"us-west511.discord.media:80"}}
+2020-04-29 22:02:37.069  INFO 276 --- [XNIO-1 task-44] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:02:37.755  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:02:37.759  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:02:55.853  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:03:20.722  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"1ad52fde4f5018d4","guild_id":"661026488757518336","endpoint":"us-west511.discord.media:80"}}
+2020-04-29 22:03:20.928  INFO 276 --- [parallel-7] s.n.m.impl.connections.AudioWebSocket    : Websocket to wss://us-west511.discord.media/?v=4 closed with code 4006 and reason Session is no longer valid.
+2020-04-29 22:03:20.929  WARN 276 --- [parallel-7] s.n.m.impl.connections.AudioWebSocket    : Connection closed due to [4006 SESSION_NO_LONGER_VALID] Session is no longer valid.. This could indicate an issue with the magma library or your usage of it. Please get in touch. https://github.com/napstr/Magma/issues
+2020-04-29 22:03:20.929  INFO 276 --- [parallel-7] s.n.m.impl.connections.AudioWebSocket    : Closing
+2020-04-29 22:03:20.930  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:03:25.446  INFO 276 --- [XNIO-1 task-46] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:03:26.155  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:03:26.158  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:31.031  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"27be40b0b0687342","guild_id":"661026488757518336","endpoint":"us-west511.discord.media:80"}}
+2020-04-29 22:03:36.326  INFO 276 --- [XNIO-1 task-48] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:03:37.139  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:03:37.143  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.143  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAGWQAALcVFxQUVNNFQ3MEUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xUXFBRU00VDcwRQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.144  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAqQIASkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChGdWxsIFZlcnNpb24pAAVDZXZhbgAAAAAAAfQAAAsyR2hoVl9XR3NhMAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTJHaGhWX1dHc2EwAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.145  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMTI6MDAgUE0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA7sUAALN0tBSVNnbDctQlEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj03S0FJU2dsNy1CUQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.146  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMDc6MDAgQU0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA4w0AALajUzVlQ2X3N2RWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1qNTNWVDZfc3ZFYwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.146  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMDY6MDAgQU0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA2/iAALTk96RXU2djZwSW8AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OT3pFdTZ2NnBJbwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.146  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMDg6MDAgQU0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA2/iAALSFZnM29QMUlUV1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1IVmczb1AxSVRXUQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.147  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkgIAM0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gMDk6MDAgQU0gKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA2/iAALd1JZczFwbWVDTFEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj13UllzMXBtZUNMUQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.147  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApAIARUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIC0gUmVzaWRlbnQgU2VydmljZXMgQnVpbGRpbmcgKEV4dGVuZGVkKQAFQ2V2YW4AAAAAAA6p6AALTG9za25rOHJQU2cAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1Mb3Nrbms4clBTZwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.148  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOb29rJ3MgQ3Jhbm55IChVcGdyYWRlZCkABUNldmFuAAAAAAACQiAAC3VJNzRCaDBkcGZNAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dUk3NEJoMGRwZk0AB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.149  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlwIAOEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgIC0gU2hvcCBDbG9zaW5nAAVDZXZhbgAAAAAAAkIgAAtXV1NDSHp1Y1B0bwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVdXU0NIenVjUHRvAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.151  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApQIARkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgQnJvYWRjYXN0IChUb20gTm9vaykABUNldmFuAAAAAAABiogACzJsSHFrcU92QkpjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9MmxIcWtxT3ZCSmMAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.152  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApQIARkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgQnJvYWRjYXN0IChJc2FiZWxsZSkABUNldmFuAAAAAAAAv2gACzAzUWNRR2lfeXVBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9MDNRY1FHaV95dUEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.152  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmQIAOkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBBaXJwb3J0IENvdW50ZXIABUNldmFuAAAAAAAB5GAACy1KazFkTk1MQ1JRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LUprMWROTUxDUlEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.153  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAqgIAS0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBSZXNjdWUgU2VydmljZSAoUmVzZXR0aSdzIFRoZW1lKQAFQ2V2YW4AAAAAAAG9UAALYjVYNkRNLWFyMFUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1iNVg2RE0tYXIwVQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.154  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBGaXNoaW5nIFRvdXJuZXkgJiBCdWctT2ZmAAVDZXZhbgAAAAAAAf+4AAtVNWRMZ1FJY1JhRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVU1ZExnUUljUmFFAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.154  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlgIAN0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBBYmxlIFNpc3RlcnMABUNldmFuAAAAAAABvVAAC3JLYng1ZzMzMjQ4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9cktieDVnMzMyNDgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.155  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoAIAQUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBSZXNpZGVudCBTZXJ2aWNlcyBUZW50AAVDZXZhbgAAAAAAAlHAAAtUNjdtU2dWRDNzWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVQ2N21TZ1ZEM3NZAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.155  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmAIAOUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgIC0gTm9vaydzIENyYW5ueQAFQ2V2YW4AAAAAAAJRwAALMUJ6cDB5M2lRek0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0xQnpwMHkzaVF6TQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.156  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApAIARUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBSZXNpZGVudCBTZXJ2aWNlcyBCdWlsZGluZwAFQ2V2YW4AAAAAAAImyAALaVp2bzZQbGI5U2cAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1pWnZvNlBsYjlTZwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.157  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmwIAPEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBNdXNldW0gKEVudHJhbmNlKQAFQ2V2YW4AAAAAAAGh+AALX21ZaG16aXlWa2MAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1fbVlobXppeVZrYwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.157  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnwIAQEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBNdXNldW0gKEZpc2ggRXhoaWJpdCkABUNldmFuAAAAAAABY3gAC3ZlUWZ3enRSQ3pjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dmVRZnd6dFJDemMAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.158  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBNdXNldW0gKEZvc3NpbCBFeGhpYml0KQAFQ2V2YW4AAAAAAAHYqAALM1lvZmtBT1RZNXcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0zWW9ma0FPVFk1dwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.159  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAngIAP0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBNdXNldW0gKEJ1ZyBFeGhpYml0KQAFQ2V2YW4AAAAAAAFXwAALakVIWHJUbzNITWcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1qRUhYclRvM0hNZwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.161  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgMSkABUNldmFuAAAAAAABGUAAC2NTR0FuTDlWbXRrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Y1NHQW5MOVZtdGsAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.161  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgMikABUNldmFuAAAAAAABGUAACzd5Sk1KdGVzbFlFAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N3lKTUp0ZXNsWUUAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.162  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgMykABUNldmFuAAAAAAABGUAACzktb1N4ZWM3dWVZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9OS1vU3hlYzd1ZVkAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.162  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNCkABUNldmFuAAAAAAABW6gAC09IbWlFR1R4VGFNAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9T0htaUVHVHhUYU0AB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.163  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNSkABUNldmFuAAAAAAACdOgACzJfMmtTbkttY1c4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Ml8ya1NuS21jVzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.164  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNSAtIFJhaW4pAAVDZXZhbgAAAAAAAnToAAtkSmVOREtGWFlnRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWRKZU5ES0ZYWWdFAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.164  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNSAtIFNub3cpAAVDZXZhbgAAAAAAAnToAAt0U0UtV2c5UmRLZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXRTRS1XZzlSZEtnAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.165  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNikABUNldmFuAAAAAAACdOgAC1JlREZzMDFLU2ZBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmVERnMwMUtTZkEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.166  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlwIAOEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBNdXNldW0gKFRlbnQpAAVDZXZhbgAAAAAAAUggAAtoN0I2MS11d3Z1cwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWg3QjYxLXV3dnVzAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.166  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNiAtIFJhaW4pAAVDZXZhbgAAAAAAAnToAAs5SnpPR3FXYnBtRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTlKek9HcVdicG1FAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.167  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNiAtIFNub3cpAAVDZXZhbgAAAAAAAnToAAtBaUI0blZoX0hKYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUFpQjRuVmhfSEpjAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.167  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAPUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNykABUNldmFuAAAAAAACdOgAC21Db0RST0NJU3NZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bUNvRFJPQ0lTc1kAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.168  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNyAtIFJhaW4pAAVDZXZhbgAAAAAAAnToAAtSZ191TXJkOG84SQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJnX3VNcmQ4bzhJAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.169  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAowIAREFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoUGhhc2UgNyAtIFNub3cpAAVDZXZhbgAAAAAAAnToAAtIWjZRWEZmZlYtbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUhaNlFYRmZmVi1vAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.171  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnQIAPkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoQ2FtcGZpcmUpAAVDZXZhbgAAAAAAAVuoAAtfalJEV2ZMcTdaUQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PV9qUkRXZkxxN1pRAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.172  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoAIAQUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBQcm9sb2d1ZSAoSy5LLiBTbGlkZXIpAAVDZXZhbgAAAAAAATCwAAtmWWxXa29fOXVNYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZZbFdrb185dU1jAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.172  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmwIAPEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5KQAFQ2V2YW4AAAAAAAIDoAALSFNtVmdYUVlpSkEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1IU21WZ1hRWWlKQQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.173  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnQIAPkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoTmlnaHQpAAVDZXZhbgAAAAAAAgeIAAs2NE4zWkVsN040RQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTY0TjNaRWw3TjRFAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.173  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gU25vdykABUNldmFuAAAAAAACA6AACzlWZ0FOSW1yWjVRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9OVZnQU5JbXJaNVEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.174  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApAIARUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoTmlnaHQgLSBSYWluKQAFQ2V2YW4AAAAAAAIHiAALTXlLVkNZc2JCT3MAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1NeUtWQ1lzYkJPcwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.174  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApAIARUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoTmlnaHQgLSBTbm93KQAFQ2V2YW4AAAAAAAITQAALVFh6ZEdmdHRiRXMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1UWHpkR2Z0dGJFcwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.175  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmAIAOUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBUaW1lZCBNaW5pZ2FtZQAFQ2V2YW4AAAAAAAJxAAALbWFVVmxNYXlVZjQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1tYVVWbE1heVVmNAAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.175  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmQIAOkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBIYXBweSBOZXcgWWVhciEABUNldmFuAAAAAAAAVfAAC2ZKSVdaNFhTclQwAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZkpJV1o0WFNyVDAAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.176  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRXZlICgxMTozMCBQTSkABUNldmFuAAAAAAAB6EgAC3pUblJWLTJUdWJVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9elRuUlYtMlR1YlUAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.177  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRGF5ICgxMjowMCBBTSkABUNldmFuAAAAAAADNFAAC2NMbFRUR1FtbWY4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Y0xsVFRHUW1tZjgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.177  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRXZlICgxMTowMCBQTSkABUNldmFuAAAAAAACD1gACzZvZHJnUVdveUs4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Nm9kcmdRV295SzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.178  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRGF5ICgwMjowMCBBTSkABUNldmFuAAAAAAACbRgACzZtTlRNMVdUTFF3AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Nm1OVE0xV1RMUXcAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.178  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRXZlICgxMTo1MCBQTSkABUNldmFuAAAAAAACJsgAC1EwRXdwM3VBMXFrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UTBFd3AzdUExcWsAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.179  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBOZXcgWWVhcnMgRXZlICgxMTo1NSBQTSkABUNldmFuAAAAAAABvVAAC3FrOHoxTERYSElFAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9cWs4ejFMRFhISUUAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.180  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAnAIAMldvbWFuIGxpdmVzIG5pbmUgeWVhcnMgaW4gZm9yZ290dGVuIGhvdXNlIGZvciBmcmVlABBDQlMgVGhpcyBNb3JuaW5nAAAAAAADV3gAC3FUSGRMd3ZFcEZjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9cVRIZEx3dkVwRmMAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.181  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2QU0ABUNldmFuAAAAAAACQiAACzNEZGxKQ1htN1Z3AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9M0RkbEpDWG03VncAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.181  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2QU0gKFJhaW4pAAVDZXZhbgAAAAAAAkIgAAtzVkZhUUVITG5kawABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXNWRmFRRUhMbmRrAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.182  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2QU0gKFNub3cpAAVDZXZhbgAAAAAAAkIgAAtiWTdUZDQ5OEN6awABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWJZN1RkNDk4Q3prAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.182  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3QU0ABUNldmFuAAAAAAAClCgAC2tYdnBkell6eWlVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9a1h2cGR6WXp5aVUAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.183  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3QU0gKFNub3cpAAVDZXZhbgAAAAAAApQoAAtYeU5VNVVNeDM3ZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVh5TlU1VU14MzdnAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.183  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3QU0gKFJhaW4pAAVDZXZhbgAAAAAAApQoAAtDcGVhcG91N1lMQQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUNwZWFwb3U3WUxBAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.184  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4QU0ABUNldmFuAAAAAAACdOgAC2U1aF9LTTFrWGd3AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZTVoX0tNMWtYZ3cAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.184  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4QU0gKFJhaW4pAAVDZXZhbgAAAAAAAnToAAtxSmNJSGJqQ0RyZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXFKY0lIYmpDRHJnAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.185  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4QU0gKFNub3cpAAVDZXZhbgAAAAAAAnToAAs3R2dLRVJzVlZiQQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTdHZ0tFUnNWVmJBAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.185  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA5QU0ABUNldmFuAAAAAAAB/7gAC2UxcUtka0RlRG9jAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZTFxS2RrRGVEb2MAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.186  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA5QU0gKFJhaW4pAAVDZXZhbgAAAAAAAf+4AAtkbWxZbUgxNi1DRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWRtbFltSDE2LUNFAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.187  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA5QU0gKFNub3cpAAVDZXZhbgAAAAAAAf+4AAtoaV9YZVdkY0xqawABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWhpX1hlV2RjTGprAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.188  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjgIAL0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMEFNAAVDZXZhbgAAAAAAAnjQAAtCMjBPNThjZVlrbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUIyME81OGNlWWtvAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.189  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMEFNIChSYWluKQAFQ2V2YW4AAAAAAAJ40AALTF9JOWVVa0k4VzAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1MX0k5ZVVrSThXMAAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.191  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMEFNIChTbm93KQAFQ2V2YW4AAAAAAAJ40AALdGR0eDd1bXZzTk0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj10ZHR4N3VtdnNOTQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.191  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjgIAL0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMUFNAAVDZXZhbgAAAAAAAr8gAAtyb2owaXFBMVg3bwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXJvajBpcUExWDdvAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.192  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMUFNIChSYWluKQAFQ2V2YW4AAAAAAAK/IAALa3Q4U1pOalE0RDQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1rdDhTWk5qUTRENAAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.192  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMUFNIChTbm93KQAFQ2V2YW4AAAAAAAK/IAALUW1VSGs0QjVPc00AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1RbVVIazRCNU9zTQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.193  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjgIAL0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMlBNAAVDZXZhbgAAAAAAAkYIAAt4czRGSk92TFBDOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXhzNEZKT3ZMUEM4AAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.193  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMlBNIChSYWluKQAFQ2V2YW4AAAAAAAJGCAALWk9Nbzk2Mlh1eWcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1aT01vOTYyWHV5ZwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.194  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlQIANkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxMlBNIChTbm93KQAFQ2V2YW4AAAAAAAJGCAALR0pMejZyamU0QzAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1HSkx6NnJqZTRDMAAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.194  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxUE0ABUNldmFuAAAAAAACFygAC1dHQ1BkZTdUYlJrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9V0dDUGRlN1RiUmsAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.196  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxUE0gKFJhaW4pAAVDZXZhbgAAAAAAAhcoAAtuQlpZaGxjbDlOZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW5CWllobGNsOU5nAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.197  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAxUE0gKFNub3cpAAVDZXZhbgAAAAAAAhcoAAtBUkdUYi1SMFg4bwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUFSR1RiLVIwWDhvAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.197  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAyUE0ABUNldmFuAAAAAAAC1pAAC0hnRVRjQkJMZFRrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9SGdFVGNCQkxkVGsAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.198  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAyUE0gKFJhaW4pAAVDZXZhbgAAAAAAAtaQAAt2R0w5U1EyZTZGWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXZHTDlTUTJlNkZZAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.198  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAyUE0gKFNub3cpAAVDZXZhbgAAAAAAAtaQAAtvR3FNdU1CWVBuOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW9HcU11TUJZUG44AAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.199  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAzUE0ABUNldmFuAAAAAAACC3AAC0QyVEZTeE1uLW1jAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9RDJURlN4TW4tbWMAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.201  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAzUE0gKFJhaW4pAAVDZXZhbgAAAAAAAgtwAAs5c0YtOW0talRoSQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTlzRi05bS1qVGhJAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.202  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSAzUE0gKFNub3cpAAVDZXZhbgAAAAAAAgtwAAtFSzdieWNKbk9ncwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUVLN2J5Y0puT2dzAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.202  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA0UE0ABUNldmFuAAAAAAACFygAC2pLN3dsMzhhR2FvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9aks3d2wzOGFHYW8AB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.203  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA0UE0gKFJhaW4pAAVDZXZhbgAAAAAAAhcoAAtZLVVKLVUtcC0yQQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVktVUotVS1wLTJBAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.204  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA0UE0gKFNub3cpAAVDZXZhbgAAAAAAAiLgAAtnQ3gzN2ctcGh6OAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWdDeDM3Zy1waHo4AAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.204  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA1UE0ABUNldmFuAAAAAAADV3gAC3VMdEpJUHUtQ25zAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dUx0SklQdS1DbnMAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.205  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA1UE0gKFJhaW4pAAVDZXZhbgAAAAAAA1d4AAtBT254QllIVl9TcwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUFPbnhCWUhWX1NzAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.206  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA1UE0gKFNub3cpAAVDZXZhbgAAAAAAA1d4AAstYXY0YmlJbVZGcwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PS1hdjRiaUltVkZzAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.206  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2UE0ABUNldmFuAAAAAAACB4gAC3NEU09UMUxhTmhVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9c0RTT1QxTGFOaFUAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.207  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2UE0gKFJhaW4pAAVDZXZhbgAAAAAAAgeIAAtJWnN3dGZsZldsWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUlac3d0ZmxmV2xZAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.207  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA2UE0gKFNub3cpAAVDZXZhbgAAAAAAAgeIAAt4b3QtYmM0Z1ljMAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXhvdC1iYzRnWWMwAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.208  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3UE0ABUNldmFuAAAAAAADhlgAC3BTbThRTVQ2Z0cwAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9cFNtOFFNVDZnRzAAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.208  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3UE0gKFJhaW4pAAVDZXZhbgAAAAAAA4ZYAAtaMGtnWXg5M0ZBVQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVowa2dZeDkzRkFVAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.209  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA3UE0gKFNub3cpAAVDZXZhbgAAAAAAA4ZYAAtXTnBveVdyRWxHYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVdOcG95V3JFbEdjAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.210  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAjQIALkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4UE0ABUNldmFuAAAAAAAB7DAAC3dtNEFfNmZ1NHVRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9d200QV82ZnU0dVEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.211  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4UE0gKFJhaW4pAAVDZXZhbgAAAAAAAfQAAAtWSUcyQ0RRWkR6YwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVZJRzJDRFFaRHpjAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.212  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAlAIANUFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSA4UE0gKFNub3cpAAVDZXZhbgAAAAAAAfQAAAtJcVBQUmp6d1lSbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUlxUFBSanp3WVJvAAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.212  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAkwIANEFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBCdW5ueSBEYXkABUNldmFuAAAAAAACHvgAC1dncXJ3OFJjZG80AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9V2dxcnc4UmNkbzQAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.213  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAmQIAOkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBaaXBwZXIgVC4gQnVubnkABUNldmFuAAAAAAACHvgAC0ZEWGJLLXZRcjRRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9RkRYYkstdlFyNFEAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.213  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAApgIAR0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChBaXIgQ2hlY2spAAVDZXZhbgAAAAAAAk3YAAtBVDZlVEVDd1dfdwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUFUNmVURUN3V193AAd5b3V0dWJlAAAAAAAAAAA=","volume":100}
+2020-04-29 22:03:37.214  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAArgIAT0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBLLksuIEludmFsaWQgUmVxdWVzdCAjMSAoV2lsZCBXb3JsZCkABUNldmFuAAAAAAACJsgAC29SeXJHQUVPb2QwAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9b1J5ckdBRU9vZDAAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:03:37.214  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAIbEAALNGpRbHVJRG5Ka28AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj00alFsdUlEbkprbwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.215  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBLLksuIEludmFsaWQgUmVxdWVzdCAjMgAFQ2V2YW4AAAAAAAIbEAALMkJhRWlETHllaHcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0yQmFFaURMeWVodwAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:37.215  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBLLksuIEludmFsaWQgUmVxdWVzdCAjMwAFQ2V2YW4AAAAAAAIe+AALandFSzhIWlhvaUkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1qd0VLOEhaWG9pSQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:03:41.888 ERROR 276 --- [lava-daemon-pool-playback-1-thread-36] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of mCoDROCISsY
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:43) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:103) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:349) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Read timed out
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:35) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:91) ~[lavaplayer-1.3.38.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Read timed out
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:264) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:259) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:137) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402) ~[na:na]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.3.38.jar!/:na]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:46) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:79) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:52) ~[lavaplayer-1.3.38.jar!/:na]
+	... 9 common frames omitted
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
+  host: https://r5---sn-nx5s7n7d.googlevideo.com:443
+  localAddress: <unspecified>
+  remoteAddress: r5---sn-nx5s7n7d.googlevideo.com/74.125.5.42:443
+  connectTimeout: 3000
+  triedAddresses: r5---sn-nx5s7n7d.googlevideo.com/74.125.5.42
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method) ~[na:na]
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:448) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108) ~[na:na]
+	... 34 common frames omitted
+
+2020-04-29 22:03:42.158 ERROR 276 --- [lava-daemon-pool-playback-1-thread-65] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of dmlYmH16-CE
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:43) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:103) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:349) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Read timed out
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:35) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:91) ~[lavaplayer-1.3.38.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Read timed out
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:264) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:259) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:137) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402) ~[na:na]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.3.38.jar!/:na]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:46) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:79) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:52) ~[lavaplayer-1.3.38.jar!/:na]
+	... 9 common frames omitted
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
+  host: https://r3---sn-nx57ynls.googlevideo.com:443
+  localAddress: <unspecified>
+  remoteAddress: r3---sn-nx57ynls.googlevideo.com/173.194.152.121:443
+  connectTimeout: 3000
+  triedAddresses: r3---sn-nx57ynls.googlevideo.com/173.194.152.121
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method) ~[na:na]
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:448) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108) ~[na:na]
+	... 34 common frames omitted
+
+2020-04-29 22:03:42.165 ERROR 276 --- [lava-daemon-pool-playback-1-thread-77] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of nBZYhlcl9Ng
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:43) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:103) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:349) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: javax.net.ssl.SSLException: Read timed out
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:35) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:91) ~[lavaplayer-1.3.38.jar!/:na]
+	... 4 common frames omitted
+Caused by: javax.net.ssl.SSLException: Read timed out
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:264) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:259) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:137) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402) ~[na:na]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.3.38.jar!/:na]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.38.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:46) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:79) ~[lavaplayer-1.3.38.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:52) ~[lavaplayer-1.3.38.jar!/:na]
+	... 9 common frames omitted
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
+  host: https://r3---sn-nx5e6nez.googlevideo.com:443
+  localAddress: <unspecified>
+  remoteAddress: r3---sn-nx5e6nez.googlevideo.com/173.194.152.89:443
+  connectTimeout: 3000
+  triedAddresses: r3---sn-nx5e6nez.googlevideo.com/173.194.152.89
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method) ~[na:na]
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:448) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108) ~[na:na]
+	... 34 common frames omitted
+
+2020-04-29 22:03:51.825  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:10:13.810  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"d7412b0e5f32336b","guild_id":"661026488757518336","endpoint":"us-west773.discord.media:80"}}
+2020-04-29 22:10:20.061  INFO 276 --- [XNIO-1 task-50] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:10:21.074  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:10:21.078  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:10:43.935  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:10:51.451  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"21664061f90e0aa8","guild_id":"661026488757518336","endpoint":"us-west773.discord.media:80"}}
+2020-04-29 22:11:14.306  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:11:39.067  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"31c2c59ef120708dcf05149e83d11cd7","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"09881826bde1311e","guild_id":"661026488757518336","endpoint":"us-west773.discord.media:80"}}
+2020-04-29 22:11:43.725  INFO 276 --- [XNIO-1 task-52] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:11:44.605  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:11:44.608  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:12:47.286  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:22:07.516  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19519 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:22:07.516  INFO 276 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:22:09.331  INFO 276 --- [XNIO-1 task-54] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19921
+2020-04-29 22:22:09.335  INFO 276 --- [XNIO-1 task-54] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19921
+2020-04-29 22:22:14.953  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"cc9cd353e615b89ddd310ce2a04b8c33","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"257a4a4b1728f6de","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:22:19.280  INFO 276 --- [XNIO-1 task-55] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:22:20.116  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:22:20.120  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:22:23.235  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:22:49.893  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19921 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:22:49.893  INFO 276 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:22:52.273  INFO 276 --- [XNIO-1 task-57] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:19938
+2020-04-29 22:22:52.276  INFO 276 --- [XNIO-1 task-57] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:19938
+2020-04-29 22:22:58.705  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"f927de1cf8f7f9eafda867914a895ba4","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"9a3215080d483e52","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:23:04.628  INFO 276 --- [XNIO-1 task-58] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:23:05.318  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:23:05.322  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:23:08.647  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:37:51.678  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:19938 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:37:51.678  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:37:53.773  INFO 276 --- [XNIO-1 task-60] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:20051
+2020-04-29 22:37:53.778  INFO 276 --- [XNIO-1 task-60] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:20051
+2020-04-29 22:37:56.832  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"sessionId":"b6551b36cbfbc0b6942ce339f8f5635c","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"3629826e932f0036","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:38:02.155  INFO 276 --- [XNIO-1 task-61] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:38:02.915  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:38:02.922  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:38:04.825  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"661026488757518336"}
+2020-04-29 22:38:17.310  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:20051 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:38:17.311  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-04-29 22:38:19.199  INFO 276 --- [XNIO-1 task-63] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:20064
+2020-04-29 22:38:19.202  INFO 276 --- [XNIO-1 task-63] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:20064
+2020-04-29 22:38:21.625  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"35b082c4142ed944a1eccf6f29a0bf30","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"0cde7be394510ece","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:38:31.272  INFO 276 --- [XNIO-1 task-64] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:38:32.087  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:38:32.091  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:38:45.483  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:20064 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:38:45.483  INFO 276 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 22:38:47.134  INFO 276 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:20075
+2020-04-29 22:38:47.140  INFO 276 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:20075
+2020-04-29 22:38:48.727  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"sessionId":"3d2140a0c76b25a03869183179c37616","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"0cde7be394510ece","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:38:52.914  INFO 276 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:38:53.711  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:38:53.715  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:40:12.280  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:20075 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:40:12.281  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 22:40:13.979  INFO 276 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:20090
+2020-04-29 22:40:13.984  INFO 276 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:20090
+2020-04-29 22:40:19.000  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"sessionId":"66952bb0cd05af14c92a0474a3606cb0","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"0cde7be394510ece","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:40:23.896  INFO 276 --- [XNIO-1 task-6] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:40:24.587  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:40:24.591  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:41:00.652  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:20090 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:41:00.652  INFO 276 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2020-04-29 22:41:01.918  INFO 276 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:20107
+2020-04-29 22:41:01.922  INFO 276 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:20107
+2020-04-29 22:41:05.301  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"sessionId":"7481dff42aa9360e56feb47e29056809","op":"voiceUpdate","guildId":"661026488757518336","event":{"token":"0cde7be394510ece","guild_id":"661026488757518336","endpoint":"us-west70.discord.media:80"}}
+2020-04-29 22:41:09.866  INFO 276 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2020-04-29 22:41:10.546  INFO 276 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Animal Crossing: New Horizons Soundtrack
+2020-04-29 22:41:10.550  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAogIAQ0FuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBJc2xhbmQgVG91ciAoRGF5IC0gUmFpbikABUNldmFuAAAAAAACA6AACzdNS1Roc2hGZnc4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9N01LVGhzaEZmdzgAB3lvdXR1YmUAAAAAAAAAAA==","volume":100}
+2020-04-29 22:43:22.284  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"op":"play","guildId":"661026488757518336","track":"QAAAoQIAQkFuaW1hbCBDcm9zc2luZzogTmV3IEhvcml6b25zIFNvdW5kdHJhY2sgLSBXZWxjb21lIEhvcml6b25zIChMaXZlKQAFQ2V2YW4AAAAAAAGWQAALcVFxQUVNNFQ3MEUAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xUXFBRU00VDcwRQAHeW91dHViZQAAAAAAAAAA","volume":100}
+2020-04-29 22:44:24.835  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:20107 -- CloseStatus[code=1006, reason=]
+2020-04-29 22:44:24.836  INFO 276 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
