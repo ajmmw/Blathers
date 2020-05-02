@@ -1,4 +1,4 @@
-async function _continue(msg) {
+async function _continue(msg, player) {
 	//had to use promises with this so the code would wait for this to finish
 	//this stuff was mind bending lmao
 	return new Promise(function (resolve, reject) {
@@ -25,6 +25,9 @@ async function _continue(msg) {
 
 				collector.on('end', (_, reason) => {
 					if (['time', 'cancelled'].includes(reason)) {
+						if (player) {
+							if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
+						}
 						message.channel.send(`⚠ **Selection Timed Out**`);
 						resolve(true);
 					}
@@ -49,13 +52,12 @@ exports.run = async (client, message, args) => {
 	//check if bot is already playing
 	let amiplaying = client.music.players.get(message.guild.id);
 	if (amiplaying) {
-		vcheck = await _continue(message);
+		vcheck = await _continue(message, amiplaying);
 	}
 
 	//disgusting, sorry. it works.
-	if (vcheck) {
-		return;
-	} else {
+	if (vcheck) return;
+	else {
 		if (amiplaying) {
 			amiplaying.queue.splice(0, amiplaying.queue.length - 1);
 			amiplaying.stop();
@@ -145,7 +147,7 @@ exports.run = async (client, message, args) => {
 			//timed out :(
 			if (['time', 'cancelled'].includes(reason)) {
 				if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
-					return message.channel.send(`${client.emoji.warning} **Selection Timed Out**`);
+				return message.channel.send(`${client.emoji.warning} **Selection Timed Out**`);
 			}
 		});
 	});
