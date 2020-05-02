@@ -85,6 +85,6 @@ module.exports = async (client, message) => {
 
 	timestamps.set(message.author.id, now);
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
+	if (message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES'])) message.delete();
 	cmd.run(client, message, args, level[1], Discord);
 };
