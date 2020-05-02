@@ -4,7 +4,6 @@ exports.run = async (client, message, args) => {
 
 	if (!message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES', 'READ_MESSAGE_HISTORY'])) return client.error(message.channel, 'Invalid Permissions!', `I currently don't have the \`Manage Messages\` and/or \`Read Message History\``);
 
-	await message.delete();
 	// If delete count is nonexistent, less than 1 or greater than 100, display this
 	if (!deleteCount || deleteCount < 1 || deleteCount > 100) {
 		return client.error(message.channel, 'Invalid Number of Messages to Purge!', 'Please provide a number **between 1 and 100** for the number of messages to delete!');

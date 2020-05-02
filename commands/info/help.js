@@ -6,7 +6,7 @@ exports.run = (client, message, [command], level) => {
 		const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
 
 		let currentCategory = '';
-		let output = `= Command List =\n\n[Use ${client.config.prefix}help <command name> for details]\n`;
+		let output = `= Command List =\n\n[Use ${client.prefix}help <command name> for details]\n`;
 
 		const sorted = commands.array().sort((p, c) => (p.help.category > c.help.category ? 1
 			: p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1));
@@ -16,14 +16,14 @@ exports.run = (client, message, [command], level) => {
 				output += `\u200b\n== ${cat} ==\n`;
 				currentCategory = cat;
 			}
-			output += `${client.config.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
+			output += `${client.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
 		});
 		output += `\n= Join the Support Server =\nhttps://discord.gg/z6uApMZ`;
 		return message.author.send(output, { code: 'asciidoc', split: { char: '\u200b' } }).catch(() => { return message.reply("Please unblock your DMs so I can send you the help commands.") });
 	} else if (client.commands.has(command) || client.aliases.has(command)) {
 		const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
-		let output = `= ${cmd.help.name.toProperCase()} = \n${cmd.help.description}\n\nUsage :: ${client.config.prefix}${cmd.help.usage}`;
+		let output = `= ${cmd.help.name.toProperCase()} = \n${cmd.help.description}\n\nUsage :: ${client.prefix}${cmd.help.usage}`;
 
 		if (cmd.conf.aliases) {
 			output += `\nAliases :: ${cmd.conf.aliases.join(', ')}`;
@@ -35,7 +35,7 @@ exports.run = (client, message, [command], level) => {
 
 		return message.author.send(output, { code: 'asciidoc' }).catch(() => { return });
 	} else {
-		return client.error(message.channel, 'Invalid Command!', `All valid commands can be found by using \`${client.config.prefix}help\`!`);
+		return client.error(message.channel, 'Invalid Command!', `All valid commands can be found by using \`${client.prefix}help\`!`);
 	}
 };
 

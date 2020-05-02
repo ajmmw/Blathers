@@ -1,4 +1,8 @@
 exports.run = (client, message, args) => {
+	// Check If Custom Channel is Set and Isnt Deleted
+	Settings = client.getSetting.get(message.guild.id);
+	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
+	
 	const voiceChannel = message.member.voice.channel;
 	const player = client.music.players.get(message.guild.id);
 

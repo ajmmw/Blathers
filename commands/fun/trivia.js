@@ -1,4 +1,8 @@
 exports.run = async (client, message, args) => {
+	// Check If Custom Channel is Set and Isnt Deleted
+	Settings = client.getSetting.get(message.guild.id);
+	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
+	
 	if (!sentTrivia.has(message.guild.id)) {
 		embed = new Discord.MessageEmbed()
 			.setTitle(`Generating`)

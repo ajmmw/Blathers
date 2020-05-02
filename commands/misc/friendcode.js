@@ -1,4 +1,8 @@
 exports.run = (client, message, args) => {
+	// Check If Custom Channel is Set and Isnt Deleted
+	Settings = client.getSetting.get(message.guild.id);
+	if (client.channels.cache.get(Settings.misc_channel) && message.channel.id != Settings.misc_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.misc_channel)}.`);
+	
 	switch (args[0]) {
 		// Set Friendcode
 		case 'set':
@@ -30,16 +34,16 @@ exports.run = (client, message, args) => {
 			User = client.getFC.get(message.author.id);
 			if (User) {
 				UserSQL.prepare("DELETE FROM friendcode WHERE id = ?;").run(message.author.id);
-				return client.success(message.channel, 'Successfully Deleted!', `<@${message.author.id}> I've successfully deleted your friend code! You can set it again by typing \`;fc set <code>\`!`);
+				return client.success(message.channel, 'Successfully Deleted!', `<@${message.author.id}> I've successfully deleted your friend code! You can set it again by typing \`${client.prefix}fc set <code>\`!`);
 			}
-			return client.error(message.channel, 'No Friend Code To Remove!', `<@${message.author.id}> You did not have a friend code in the database. You can set it by typing \`;fc set <code>\`!`);
+			return client.error(message.channel, 'No Friend Code To Remove!', `<@${message.author.id}> You did not have a friend code in the database. You can set it by typing \`${client.prefix}fc set <code>\`!`);
 
 		// Display User Friendcode
 		default:
 			if (args.length === 0) {
 				User = client.getFC.get(message.author.id);
 				if (!User) {
-					return client.error(message.channel, 'No Code Found!', `<@${message.author.id}> You have not set a friend code! You can do so by running \`;fc set <code>\`!`);
+					return client.error(message.channel, 'No Code Found!', `<@${message.author.id}> You have not set a friend code! You can do so by running \`${client.prefix}fc set <code>\`!`);
 				}
 				embed = new Discord.MessageEmbed()
 					.setAuthor(`${message.member.displayName}'s Friend Code`, message.author.displayAvatarURL())

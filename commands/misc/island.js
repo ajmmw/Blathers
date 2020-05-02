@@ -1,4 +1,8 @@
 exports.run = (client, message, args) => {
+	// Check If Custom Channel is Set and Isnt Deleted
+	Settings = client.getSetting.get(message.guild.id);
+	if (client.channels.cache.get(Settings.misc_channel) && message.channel.id != Settings.misc_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.misc_channel)}.`);
+	
 	switch (args[0]) {
 		// Set Character Name
 		case 'character':
@@ -81,9 +85,9 @@ exports.run = (client, message, args) => {
 			User = client.getIsland.get(message.author.id);
 			if (User) {
 				UserSQL.prepare("DELETE FROM islands WHERE id = ?;").run(message.author.id);
-				return client.success(message.channel, 'Successfully Deleted!', `<@${message.author.id}> I've successfully deleted your island information! You can set it again by typing \`;is <character|name|fruit|location> <value>\`!`);
+				return client.success(message.channel, 'Successfully Deleted!', `<@${message.author.id}> I've successfully deleted your island information! You can set it again by typing \`${client.prefix}is <character|name|fruit|location> <value>\` Example: \`${client.prefix}is fruit peach\``);
 			}
-			return client.error(message.channel, 'No Island To Remove!', `<@${message.author.id}> You did not have a island in the database. You can set it by typing \`;is <character|name|fruit|location> <value>\`!`);
+			return client.error(message.channel, 'No Island To Remove!', `<@${message.author.id}> You did not have a island in the database. You can set it by typing \`${client.prefix}is <character|name|fruit|location> <value>\` Example: \`${client.prefix}is fruit peach\``);
 
 		// Display User Friendcode
 		default:
@@ -91,7 +95,7 @@ exports.run = (client, message, args) => {
 				UserFC = client.getFC.get(message.author.id);
 				UserIS = client.getIsland.get(message.author.id);
 				if (!UserIS) {
-					return client.error(message.channel, 'No Island Found!', `<@${message.author.id}> You have not set up your island! You can do so by running \`;is <character|name|fruit|location> <value>\`!`);
+					return client.error(message.channel, 'No Island Found!', `<@${message.author.id}> You have not set up your island! You can do so by running \`${client.prefix}is <character|name|fruit|location> <value>\` Example: \`${client.prefix}is fruit peach\``);
 				}
 				output = '';
 				if (UserFC) { output += `Friend Code: **${UserFC.code}**\n` };
@@ -144,6 +148,6 @@ module.exports.help = {
 	name: 'island',
 	category: 'misc',
 	description: 'Displays your Island Information',
-	usage: 'island <character|name|fruit|location> <value>',
-	details: "<character|name|fruit|location> => Update the information of the seclected area."
+	usage: `island <character|name|fruit|location> <value>\nExample: is fruit peach`,
+	details: '<character|name|fruit|location> => Update the information of the seclected area.'
 };

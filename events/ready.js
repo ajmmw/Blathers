@@ -20,6 +20,10 @@ module.exports = (client) => {
 			}, 240000);
 		});
 
+	// Guild Settings
+	client.getSetting = UserSQL.prepare("SELECT * FROM guild_settings WHERE id = ?");
+	client.setSetting = UserSQL.prepare("INSERT OR REPLACE INTO guild_settings (id, lvl_up, prefix, music_channel, misc_channel, fun_channel) VALUES (@id, @lvl_up, @prefix, @music_channel, @misc_channel, @fun_channel);");
+	
 	//User Scores
 	client.getScore = UserSQL.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
 	client.setScore = UserSQL.prepare("INSERT OR REPLACE INTO scores (id, user, guild, name, points, level) VALUES (@id, @user, @guild, @name, @points, @level);");
@@ -44,7 +48,7 @@ module.exports = (client) => {
 			`AC:NH with ${client.users.cache.size.toLocaleString()} users`,
 			`with the developer's console`,
 			`with the ;help command`,
-			'AC:NH with PnKllr#0001',
+			'AC:NH with PnKllr',
 		];
 		index = Math.floor(Math.random() * activitiesList.length);
 
