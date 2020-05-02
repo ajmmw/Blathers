@@ -40,7 +40,7 @@ exports.run = async (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
 	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
-	
+
 	let scopedid = message.author.id; //for when we use the bot's message and need to access the original
 	let scopedauthor = message.author;
 
@@ -133,12 +133,6 @@ exports.run = async (client, message, args) => {
 					case 'PLAYLIST_LOADED':
 						//add to queue
 						res.playlist.tracks.forEach((track) => player.queue.add(track));
-
-						var playing = new Discord.MessageEmbed()
-							.setTitle('-● DJ Blathers ●-')
-							.setDescription(`Playing the **Animal Crossing: ${type}** playlist with **${res.playlist.tracks.length}** total tracks.`)
-							.setColor(client.getRandomColor());
-						message.channel.send(playing);
 						message.channel.send(`▶️ **Playlist Selected**\nPlaying the \`Animal Crossing: ${type}\` playlist with \`${res.playlist.tracks.length}\` total tracks.`);
 						//start player
 						if (!player.playing) player.play();
