@@ -28,14 +28,14 @@ shuffle = ({ array, times }) => {
 exports.run = (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
+	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
 	
 	const voiceChannel = message.member.voice.channel;
 	const player = client.music.players.get(message.guild.id);
 
-	if (!player || !player.queue[0]) return client.error(message.channel, 'No Playlist Playing', `Use \`${client.prefix}play\` to beguin selection.`);
-	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
-	if (voiceChannel.id !== player.voiceChannel.id) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (!player || !player.queue[0]) return client.error(message.channel, 'NOTHING PLAYING', `Use \`${client.prefix}play\` to beguin selection.`);
+	if (!voiceChannel) return client.warn(message.channel, 'NOT IN VOICE', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (voiceChannel.id !== player.voiceChannel.id) return client.warn(message.channel, 'NOT IN VOICE', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	try {
 		if (player.queue.length > 2) {
@@ -44,7 +44,7 @@ exports.run = (client, message, args) => {
 			});
 			return message.channel.send(`🔀 **SHUFFLE ACTIVE**\nPlaylist now shuffled.`);
 		} else {
-			client.error(message.channel, 'Not Enough Songs', `The queue only has one song left in it.`);
+			client.error(message.channel, 'NO SONGS', `The queue only has one song left in it.`);
 		}
 	} catch (e) {
 		console.error(e);

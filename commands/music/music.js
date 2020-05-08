@@ -25,9 +25,6 @@ async function _continue(msg, player) {
 
 				collector.on('end', (_, reason) => {
 					if (['time', 'cancelled'].includes(reason)) {
-						if (player) {
-							if (player.queue.length < 1) client.music.players.destroy(message.guild.id);
-						}
 						message.channel.send(`⚠ **Selection Timed Out**`);
 						resolve(true);
 					}
@@ -39,17 +36,19 @@ async function _continue(msg, player) {
 exports.run = async (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
+	if (client.channels.cache.get(Settings.music_channel) && message.channel.id != Settings.music_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.music_channel)}.`);
+
+	if (!message.channel.permissionsFor(message.guild.me).has(['ADD_REACTIONS'])) return client.error(message.channel, 'INVALID PERMISSIONS', `I currently don't have the \`Add Reactions\`permission. I need this for Playlist Selection.`);
 
 	let scopedid = message.author.id; //for when we use the bot's message and need to access the original
 	let scopedauthor = message.author;
 
 	const voiceChannel = message.member.voice.channel;
-	if (!voiceChannel) return client.warn(message.channel, 'Not In Voice Channel', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
+	if (!voiceChannel) return client.warn(message.channel, 'NOT IN VOICE', `<@${message.author.id}> You need to be in a voice channel to use this command.`);
 
 	const permissions = voiceChannel.permissionsFor(client.user);
-	if (!permissions.has('CONNECT')) return client.warn(message.channel, 'Invalid Permission', `Unable to connect to that Voice Channel.`);
-	if (!permissions.has('SPEAK')) return client.warn(message.channel, 'Invalid Permission', `Unable to speak in that Voice Channel.`);
+	if (!permissions.has('CONNECT')) return client.warn(message.channel, 'INVALID PERMISSIONS', `Unable to connect to that Voice Channel.`);
+	if (!permissions.has('SPEAK')) return client.warn(message.channel, 'INVALID PERMISSIONS', `Unable to speak in that Voice Channel.`);
 
 	let vcheck = false;
 

@@ -41,6 +41,7 @@ module.exports = (client) => {
 	client.getBug = DataSQL.prepare("SELECT * FROM bug WHERE name LIKE ?");
 	client.getFossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ?");
 	client.getVillager = DataSQL.prepare("SELECT * FROM villager WHERE name LIKE ?");
+	client.getDIY = DataSQL.prepare("SELECT * FROM diy WHERE name LIKE ?");
 
 	setInterval(() => {
 		activitiesList = [

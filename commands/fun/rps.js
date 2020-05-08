@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
+	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
 	
 	const choices = [
 		{
@@ -24,18 +24,18 @@ exports.run = (client, message, args) => {
 
 			const random = Math.floor(Math.random() * choices.length);
 			const final = choices[random];
-			const resultStr = `<@${message.author.id}> threw \`${args[0]}\` while their opponent threw \`${final.choice}\`!`;
+			const resultStr = `<@${message.author.id}> threw \`${args[0]}\` while I threw \`${final.choice}\`!`;
 
 			if (args[0] === final.choice) {
-				return message.channel.send(`➖ **Tie!**\n<@${message.author.id}> and their opponent both threw \`${final.choice}\` and tied!`);
+				return message.channel.send(`➖ **TIE**\n<@${message.author.id}> and I both threw \`${final.choice}\` and tied!`);
 			} else if (args[0] !== final.beats) {
-				return client.success(message.channel, 'You Won!', resultStr);
+				return client.success(message.channel, 'YOU WON', resultStr);
 			} else {
-				return client.error(message.channel, 'You Lost!', resultStr);
+				return client.error(message.channel, 'YOU LOST', resultStr);
 			}
 
 		default:
-			return client.error(message.channel, 'No Choice Given', `<@${message.author.id}> please pick either \`rock | paper | scissors\``);
+			return client.error(message.channel, 'ERROR', `<@${message.author.id}> please pick either \`rock | paper | scissors\``);
 	}
 };
 

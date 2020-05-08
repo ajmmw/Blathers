@@ -35,7 +35,7 @@ exports.run = (client, message, [command], level) => {
 
 		return message.author.send(output, { code: 'asciidoc' }).catch(() => { return });
 	} else {
-		return client.error(message.channel, 'Invalid Command!', `All valid commands can be found by using \`${client.prefix}help\`!`);
+		return client.error(message.channel, 'INVALID COMMAND', `All valid commands can be found by using \`${client.prefix}help\`!`);
 	}
 };
 

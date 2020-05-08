@@ -40,7 +40,7 @@ module.exports = async (client, message) => {
 		const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
 		if (score.level < curLevel) {
 			score.level++;
-			if (Guild_Settings.lvl_up == 'true') {
+			if (Guild_Settings.lvl_up === 'true') {
 				embed = new Discord.MessageEmbed()
 					.setDescription(`<@${message.author.id}>, You've leveled up to level **${curLevel}**! Ain't that dandy? ${client.emoji.leafGlow}`)
 					.setColor(client.getRandomColor());
@@ -100,6 +100,6 @@ module.exports = async (client, message) => {
 
 	timestamps.set(message.author.id, now);
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-	if (message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES'])) message.delete();
+	// if (message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES'])) message.delete();
 	cmd.run(client, message, args, level[1], Discord);
 };

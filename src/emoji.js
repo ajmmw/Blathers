@@ -48,4 +48,10 @@ module.exports = {
   warning: '⚠',
   dice: '🎲',
   leafGlow: '<a:leafrainbow:700145511012761690>',
+  bells: '<:bells:706446973711941653>',
+  Apple: '<:apple:706420582383747114>',
+  Cherry: '<:cherry:706420773346213889>',
+  Orange: '<:orange:706420858490585089>',
+  Peach: '<:peach:706420967831765073>',
+  Pear: '<:pear:706420665493749807>'
 };

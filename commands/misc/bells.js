@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.misc_channel) && message.channel.id != Settings.misc_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.misc_channel)}.`);
+	if (client.channels.cache.get(Settings.misc_channel) && message.channel.id != Settings.misc_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.misc_channel)}.`);
 	
 	switch (args[0]) {
 		// Dsiplay Your Bells
@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
 				User = client.getScore.get(message.author.id, message.guild.id);
 				if (!User) return;
 				embed = new Discord.MessageEmbed()
-					.setDescription(`<@${message.author.id}>, You currently have ${User.points} <:bells:698107158805348373> and are level ${User.level}!`)
+					.setDescription(`<@${message.author.id}>, You currently have ${User.points} ${client.emoji.bells} and are level ${User.level}!`)
 					.setColor(client.getRandomColor());
 				return message.channel.send(embed);
 			}
@@ -20,14 +20,14 @@ exports.run = (client, message, args) => {
 			if (member) {
 				User = client.getScore.get(message.mentions.members.first().id, message.guild.id);
 				if (!User) {
-					return client.error(message.channel, 'No Bells Found!', `<@${message.mentions.members.first().displayName}> has yet to be active in the server.`);
+					return client.error(message.channel, 'ERROR', `<@${message.mentions.members.first().displayName}> has yet to be active in the server.`);
 				}
 				embed = new Discord.MessageEmbed()
-					.setDescription(`<@${message.mentions.members.first().id}> Currently has ${User.points} <:bells:698107158805348373> and is level ${User.level}!`)
+					.setDescription(`<@${message.mentions.members.first().id}> Currently has ${User.points} ${client.emoji.bells} and is level ${User.level}!`)
 					.setColor(client.getRandomColor());
 				return message.channel.send(embed);
 			}
-			return client.error(message.channel, 'Unknown Member!', `Could not find a member by that name!`);
+			return client.error(message.channel, 'ERROR', `Could not find a member by that name!`);
 	}
 };
 

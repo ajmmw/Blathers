@@ -2,7 +2,7 @@ exports.run = async (client, message, args) => {
 	// Gets the delete count
 	const deleteCount = parseInt(args[0], 10);
 
-	if (!message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES', 'READ_MESSAGE_HISTORY'])) return client.error(message.channel, 'Invalid Permissions!', `I currently don't have the \`Manage Messages\` and/or \`Read Message History\``);
+	if (!message.channel.permissionsFor(message.guild.me).has(['MANAGE_MESSAGES', 'READ_MESSAGE_HISTORY'])) return client.error(message.channel, 'Invalid Permissions!', `I currently don't have the \`Manage Messages\` and/or \`Read Message History\` permissions.`);
 
 	// If delete count is nonexistent, less than 1 or greater than 100, display this
 	if (!deleteCount || deleteCount < 1 || deleteCount > 100) {
@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
 };
 
 module.exports.conf = {
-	enabled: true,
+	enabled: false,
 	aliases: [],
 	permLevel: 'Mod',
 	cooldown: 10

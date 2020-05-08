@@ -1,12 +1,12 @@
 module.exports.run = (client, message, args, level) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
+	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
 	
 	const inputNumber = parseInt(args[0], 10);
 
 	if (!inputNumber) {
-		return client.error(message.channel, 'Invalid Number!', 'Please provide a valid number for the max range!');
+		return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide a valid number for the max range!`);
 	}
 
 	const outputNumber = Math.ceil(Math.random() * inputNumber);

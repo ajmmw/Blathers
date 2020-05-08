@@ -1,8 +1,8 @@
 exports.run = async (client, message, args) => {
 	// Check If Custom Channel is Set and Isnt Deleted
 	Settings = client.getSetting.get(message.guild.id);
-	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'Wrong Channel', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
-	
+	if (client.channels.cache.get(Settings.fun_channel) && message.channel.id != Settings.fun_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.fun_channel)}.`);
+
 	if (!sentTrivia.has(message.guild.id)) {
 		embed = new Discord.MessageEmbed()
 			.setTitle(`Generating`)
@@ -63,17 +63,19 @@ exports.run = async (client, message, args) => {
 								} else {
 									points = 50;
 								}
-								client.channels.cache.get(message.channel.id).send(`Correct ${collected.first().author.toString()}! You scored ${points} <:bells:698107158805348373>.`);
+								client.channels.cache.get(message.channel.id).send(`Correct ${collected.first().author.toString()}! You scored ${points} ${client.emoji.bells}.`);
 								let score;
 								score = client.getScore.get(collected.first().author.id, message.guild.id);
 								score.points += points;
 								const curLevel = Math.floor(0.2 * Math.sqrt(score.points));
 								if (score.level < curLevel) {
 									score.level++;
-									//embed = new Discord.MessageEmbed()
-									//  .setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy? ${client.emoji.leafGlow}`)
-									//  .setColor(getRandomColor());
-									//message.channel.send(embed);
+									if (Guild_Settings.lvl_up === 'true') {
+										embed = new Discord.MessageEmbed()
+											.setDescription(`<@${collected.first().author.toString()}>, You've leveled up to level **${curLevel}**! Ain't that dandy? ${client.emoji.leafGlow}`)
+											.setColor(getRandomColor());
+										message.channel.send(embed);
+									}
 								}
 								return client.setScore.run(score);
 							})
@@ -91,11 +93,11 @@ exports.run = async (client, message, args) => {
 					});
 			})
 	} else
-		client.channels.cache.get(message.channel.id).send(`A question has already been asked.`);
+		client.channels.cache.get(message.channel.id).send(`${client.emoji.warning} **WARNING**\nA question has already been asked.`);
 };
 
 module.exports.conf = {
-	enabled: true,
+	enabled: false,
 	aliases: ['q', 'question'],
 	permLevel: 'User',
 	cooldown: 10

@@ -1,6 +1,6 @@
 {
 	"name": "blathers",
-	"version": "1.3.5",
+	"version": "1.4.0",
 	"description": "Discord Bot - https://discord.gg/TuEEkVc",
 	"main": "bot.js",
 	"dependencies": {
