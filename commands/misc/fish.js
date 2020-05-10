@@ -24,6 +24,7 @@ exports.run = (client, message, args) => {
     .addField(`Shadow Size`, `${Fish.size}`, true)
     .addField(`Time of Day`, `${Fish.time}`, true)
     .addField(`Location`, `${Fish.location}`, true)
+    .addField(`Rarity`, `${Fish.rarity}`, true)
     .addField(`Available (Northern Hemisphere)`, `${Fish.nh}`, false)
     .addField(`Available (Southern Hemisphere)`, `${Fish.sh}`, false)
     .setThumbnail(Fish.image)

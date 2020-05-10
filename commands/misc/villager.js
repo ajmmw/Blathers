@@ -28,6 +28,7 @@ exports.run = (client, message, args) => {
     .addField(`Sign`, Villager.sign, true)
     .addField(`Phrase`, Villager.phrase, true)
     .setThumbnail(Villager.portrait)
+    .setImage(Villager.image)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);
 }

@@ -23,6 +23,7 @@ exports.run = (client, message, args) => {
     .addField(`Price`, `${Bug.price.toLocaleString()} ${client.emoji.bells}`, true)
     .addField(`Time of Day`, `${Bug.time}`, true)
     .addField(`Location`, `${Bug.location}`, true)
+    .addField(`Rarity`, `${Bug.rarity}`, true)
     .addField(`Available (Northern Hemisphere)`, `${Bug.nh}`, false)
     .addField(`Available (Southern Hemisphere)`, `${Bug.sh}`, false)
     .setThumbnail(Bug.image)

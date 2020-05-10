@@ -8,7 +8,7 @@ module.exports.run = (client, message, args, level) => {
 	const props = require(`../../commands/${command.help.category}/${command.help.name}`);
 
 	try {
-		delete require.cache[require.resolve(`../../commands/${command.help.category}/${command.help.name}.js`)];
+		delete require.cache[require.resolve(`../../commands/${command.help.category}/${command.help.name}`)];
 		client.commands.set(command.help.name, props);
 
 		console.log(`${command.help.name} command was reloaded!`);
