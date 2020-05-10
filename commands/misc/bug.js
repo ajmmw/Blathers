@@ -27,6 +27,7 @@ exports.run = (client, message, args) => {
     .addField(`Available (Northern Hemisphere)`, `${Bug.nh}`, false)
     .addField(`Available (Southern Hemisphere)`, `${Bug.sh}`, false)
     .setThumbnail(Bug.image)
+    .setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);
   

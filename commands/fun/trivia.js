@@ -97,7 +97,7 @@ exports.run = async (client, message, args) => {
 };
 
 module.exports.conf = {
-	enabled: false,
+	enabled: true,
 	aliases: ['q', 'question'],
 	permLevel: 'User',
 	cooldown: 10

@@ -29,6 +29,7 @@ exports.run = (client, message, args) => {
     .addField(`Phrase`, Villager.phrase, true)
     .setThumbnail(Villager.portrait)
     .setImage(Villager.image)
+    .setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);
 }
