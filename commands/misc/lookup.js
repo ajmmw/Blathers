@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
 			value = args.slice(1).join(' ');
 			Bug = client.getBug.get(value);
 			if (!Bug) {
-				Bug = DataSQL.prepare("SELECT * FROM fish WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);
+				Bug = DataSQL.prepare("SELECT * FROM bug WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);
 				let output = `= Results for ${value.toProperCase()} =\n\nPlease use the following to refine your search.\n\n`;
 				for (const data of Bug) {
 					output += `${data.name.toProperCase()} :: ${data.species}\n`;
@@ -70,7 +70,7 @@ exports.run = (client, message, args) => {
 			value = args.slice(1).join(' ');
 			Fossil = client.getFossil.get(value);
 			if (!Fossil) {
-				Fossil = DataSQL.prepare("SELECT * FROM fish WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);
+				Fossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);
 				let output = `= Results for ${value.toProperCase()} =\n\nPlease use the following to refine your search.\n\n`;
 				for (const data of Fossil) {
 					output += `${data.name.toProperCase()} :: ${data.species}\n`;
