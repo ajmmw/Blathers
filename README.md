@@ -7,41 +7,45 @@ It can also store and display your islands Turnip Prices to be easly displayed a
 Some features may not be avalible yet as bot is still under heavy construction.
 # Commands
 
-### Fun
+## == Fun ==
+* ;8ball      :: Provides random responses to an asked Yes-or-No question
+* ;advice     :: Displays random advice for the user
+* ;gif        :: Displays a random Animal Crossing GIF
+* ;roll       :: Rolls a random number between 1 and the number given
+* ;rps        :: Plays rock paper scissors
+* ;trivia     :: Starts a random Trivia Question
 
-* ;8bal - Provides random responses to an asked Yes-or-No question
-* ;gif - Displays a random Animal Crossing GIF
-* ;roll - Rolls a random number between 1 and the number given
-* ;rps - Plays rock paper scissors
-* ;trivia - Starts a random Trivia Question
+## == Info ==
+* ;help       :: Displays all commands available to you
+* ;invite     :: Displays and link to invite the bot to your own server
 
-### Info
+## == Misc ==
+* ;bells      :: Shows your current Level and Bells on the current server
+* ;birthday   :: Displays todays birthdays
+* ;bug        :: Lookup a certain bug from the Museum
+* ;diy        :: Lookup a certain recipe of all craftable items.
+* ;fish       :: Lookup a certain fish from the Museum
+* ;fossil     :: Lookup a certain fossil from the Museum
+* ;friendcode :: Displays your Nintendo Switch Friend Code
+* ;island     :: Displays your Island Information
+* ;top        :: Display the current Top10 users with the most Bells on the server.
+* ;villager   :: Lookup information about a particular villager.
 
-* ;help - Get a DM with all the commands
-* ;invite - Get a link to invite the bot to your server
+## == Moderation ==
+* ;clear      :: Clears set amount of messages
 
-### Misc
+## == Music ==
+* ;music      :: Play music from any Animal Crossing game's soundtrack
+* ;nowplaying :: Displays song that's currently playing.
+* ;shuffle    :: Shuffles the current soundtrack
+* ;skip       :: Skips the currently playing track
+* ;stop       :: Stops playing music and leaves the VC
+* ;volume     :: Changes the bot's volume
 
-* ;bells - Display the amount of bells your currently have
-* ;birthday - Show which villager is having a birthday today
-* ;friendcode - Display your Nintendo Switch Friendcode
-* ;island - Display your Animal Corssing Island information
-* ;lookup - Search the Museum for information on a Bug, Fish, Fossil or villegar
-* ;top - TOP10 bell earners for that server
+## == System ==
+* ;config     :: Change various settings for Blathers in your server.
+* ;info       :: Shows information about the bot.
+* ;ping       :: Pings the client
 
-### Moderation
-
-* ;clear - Clear the selected amount of messages from chat
-
-### Music
-
-* ;play - Starts up DJ Blathers
-* ;shuffle - Shuffle Playlist
-* ;skip - Skip song
-* ;stop - Stops DJ Blathers
-* ;volume - Change volume
-
-### System
-
-* ;info - Display information about Blathers
-* ;ping - Ping Blathers
+## = Join the Support Server =
+https://discord.gg/z6uApMZ
