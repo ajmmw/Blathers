@@ -30,7 +30,7 @@ module.exports = (client) => {
 
 	//User Islands
 	client.getIsland = UserSQL.prepare("SELECT * FROM islands WHERE id = ?");
-	client.setIsland = UserSQL.prepare("INSERT OR REPLACE INTO islands (id, character, name, fruit, hemisphere) VALUES (@id, @character, @name, @fruit, @hemisphere);");
+	client.setIsland = UserSQL.prepare("INSERT OR REPLACE INTO islands (id, character, name, fruit, hemisphere, turnip_price, dodo_code, dodo_time) VALUES (@id, @character, @name, @fruit, @hemisphere, @turnip_price, @dodo_code, @dodo_time);");
 
 	//User Friendcode
 	client.getFC = UserSQL.prepare("SELECT * FROM friendcode WHERE id = ?");

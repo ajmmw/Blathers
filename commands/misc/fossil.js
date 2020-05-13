@@ -7,6 +7,7 @@ exports.run = (client, message, args) => {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> please supply the Fossil Name.`);
   }
   value = args.slice(0).join(' ');
+  if (value.length < 4) return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide a longer name to search.`);
   Fossil = client.getFossil.get(value);
   if (!Fossil) {
     Fossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);

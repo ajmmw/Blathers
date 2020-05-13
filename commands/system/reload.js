@@ -5,7 +5,7 @@ module.exports.run = (client, message, args, level) => {
 		return client.error(message.channel, 'INVALID', "That's not a valid command!");
 	}
 
-	const props = require(`../../commands/${command.help.category}/${command.help.name}`);
+	const props = require(`../../commands/${command.help.category}/${command.help.name}.js`);
 
 	try {
 		delete require.cache[require.resolve(`../../commands/${command.help.category}/${command.help.name}`)];

@@ -7,7 +7,7 @@ module.exports = (client) => {
       await confirm.react(client.emoji.redX);
 
       const filter = (reaction, user) => [client.emoji.checkMark, client.emoji.redX].includes(reaction.emoji.name)
-          && user.id === message.author.id;
+        && user.id === message.author.id;
 
       let decision = false;
       await confirm.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
@@ -39,7 +39,7 @@ module.exports = (client) => {
       counter += 1;
     });
     const filter = (reaction, user) => emojiList.includes(reaction.emoji.name)
-          && user.id === message.author.id;
+      && user.id === message.author.id;
 
     let decision = '';
     await confirm.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })

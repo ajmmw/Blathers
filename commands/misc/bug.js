@@ -7,6 +7,7 @@ exports.run = (client, message, args) => {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> please supply the Bug Name.`);
   }
   value = args.slice(0).join(' ');
+  if (value.length < 4) return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide a longer name to search.`);
   Bug = client.getBug.get(value);
   if (!Bug) {
     Bug = DataSQL.prepare("SELECT * FROM bug WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);

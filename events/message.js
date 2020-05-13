@@ -61,14 +61,14 @@ module.exports = async (client, message) => {
 	if (cmd.conf.enabled === false) {
 		if (level[1] < 10) {
 			return client.warn(
-				message.channel, 'Command Disabled', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
+				message.channel, 'COMMAND DISABLED', `This command is currently disabled. Please visit the Support Server for more information by typing \`;info\``);
 		}
 	}
 
 	// Check Perm Level
 	if (level[1] < client.levelCache[cmd.conf.permLevel]) {
 		return client.error(
-			message.channel, 'Invalid Permissions!', `You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``);
+			message.channel, 'INVALID PERMISSIONS', `You do not currently have the proper permssions to run this command!\n**Current Level:** \`${level[0]}: Level ${level[1]}\`\n**Level Required:** \`${cmd.conf.permLevel}: Level ${client.levelCache[cmd.conf.permLevel]}\``);
 	}
 
 	if (!cooldowns.has(cmd.help.name)) {

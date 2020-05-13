@@ -23,10 +23,11 @@ exports.run = (client, message, args) => {
 		.setAuthor(`${Item.name.toProperCase()}`, null)
 		.addField(`Size`, Item.sizeLink, true)
 		.addField(`Price`, `${Item.price.toLocaleString()} ${client.emoji.bells}`, true)
-		.addField(`Obtained`, Item.obtainedFrom, true)
-		.addField(`Category`, Item.category, true)
+		.addField(`Obtained`, Item.obtainedFrom)
+		.addField(`Category`, Item.category)
 		.addField(`Materials`, Item.materials)
 		.setThumbnail(Item.image)
+		.setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
 		.setColor(client.getRandomColor());
 	return message.channel.send(embed);
 }
