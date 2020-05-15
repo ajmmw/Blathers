@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
     .setDescription(`\`\`\`${Fossil.quote}\`\`\``)
     .addField(`Price`, `${Fossil.price.toLocaleString()} ${client.emoji.bells}`, true)
     .setThumbnail(Fossil.image)
-    .setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
+    .setFooter(`Info from Fandom WIKI | ${client.prefix}invite to add Blathers to your server`, null)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);
 

@@ -3,7 +3,6 @@ exports.run = (client, message, args) => {
   Settings = client.getSetting.get(message.guild.id);
   if (client.channels.cache.get(Settings.misc_channel) && message.channel.id != Settings.misc_channel) return client.warn(message.channel, 'WRONG CHANNEL', `<@${message.author.id}> Please use that command in ${client.channels.cache.get(Settings.misc_channel)}.`);
 
-  // DIY Looku
   if (args.length === 0) {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide the name of the villager you wish to lookup.`);
   }
@@ -28,7 +27,7 @@ exports.run = (client, message, args) => {
     .addField(`Sign`, Villager.sign, true)
     .addField(`Phrase`, Villager.phrase, true)
     .setThumbnail(Villager.portrait)
-    .setImage(Villager.image)
+    // .setImage(Villager.image)
     .setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);

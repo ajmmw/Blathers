@@ -75,9 +75,9 @@ exports.run = async (client, message, args) => {
 	});
 
 	//playlist links
-	const new_horizons = 'https://www.youtube.com/playlist?list=PLtR9Q1fwfhSfRdExf8MhlmQZK1XctX-1I';
-	const new_leaf = 'https://www.youtube.com/playlist?list=PLhHcMbVmbwCerhZdxVr4odQY_ZgLXEjET';
-	const city_folk = 'https://www.youtube.com/playlist?list=PLH834K1pkcjI6DHKCawkF87zFx23TNh5T';
+	const new_horizons = 'https://www.youtube.com/playlist?list=PLEH-LfJOB3zX0ctzigFyHQZrGIP5mJJRe';
+	const new_leaf = 'https://www.youtube.com/playlist?list=PLEH-LfJOB3zWGtwYOGLUZMe9e4aG7HZrH';
+	const city_folk = 'https://www.youtube.com/playlist?list=PLEH-LfJOB3zWGeeXk12vi2d3hnVNbT9mC';
 	const remixes = 'https://www.youtube.com/playlist?list=PLEH-LfJOB3zWu0UpLSiHetgYLsSpg_DDS';
 
 	var selectionembed = new Discord.MessageEmbed()

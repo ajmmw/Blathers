@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
 		.addField(`Category`, Item.category)
 		.addField(`Materials`, Item.materials)
 		.setThumbnail(Item.image)
-		.setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
+		.setFooter(`Info from Fandom WIKI | ${client.prefix}invite to add Blathers to your server`, null)
 		.setColor(client.getRandomColor());
 	return message.channel.send(embed);
 }

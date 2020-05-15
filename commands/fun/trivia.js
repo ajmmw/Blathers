@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 				sentTrivia.add(message.guild.id);
 				embed = new Discord.MessageEmbed()
 					.setTitle(`${Buffer.from(body.results[0].category, 'base64').toString()} - ${Buffer.from(body.results[0].difficulty, 'base64').toString().toUpperCase()}`)
-					.setDescription(`**${Buffer.from(body.results[0].question, 'base64').toString()}**\n\nChoose from the below options.`)
+					.setDescription(`**${Buffer.from(body.results[0].question, 'base64').toString()}**\n\n\`Choose from the below options.\nAnswer must match word for word\``)
 					.setColor(0xFFA21C);
 
 				options = [];

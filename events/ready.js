@@ -23,7 +23,7 @@ module.exports = (client) => {
 	// Guild Settings
 	client.getSetting = UserSQL.prepare("SELECT * FROM guild_settings WHERE id = ?");
 	client.setSetting = UserSQL.prepare("INSERT OR REPLACE INTO guild_settings (id, lvl_up, prefix, music_channel, misc_channel, fun_channel) VALUES (@id, @lvl_up, @prefix, @music_channel, @misc_channel, @fun_channel);");
-	
+
 	//User Scores
 	client.getScore = UserSQL.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
 	client.setScore = UserSQL.prepare("INSERT OR REPLACE INTO scores (id, user, guild, name, points, level) VALUES (@id, @user, @guild, @name, @points, @level);");
@@ -44,16 +44,30 @@ module.exports = (client) => {
 	client.getDIY = DataSQL.prepare("SELECT * FROM diy WHERE name LIKE ?");
 
 	setInterval(() => {
-		activitiesList = [
-			`on ${client.guilds.cache.size.toLocaleString()} islands`,
-			`AC:NH with ${client.users.cache.size.toLocaleString()} users`,
-			`with the developer's console`,
-			`with the ;help command`,
-			'AC:NH with PnKllr',
+		const promises = [
+			client.shard.fetchClientValues('users.cache.size'),
+			client.shard.fetchClientValues('guilds.cache.size'),
 		];
-		index = Math.floor(Math.random() * activitiesList.length);
 
-		// Setting activity
-		client.user.setActivity(activitiesList[index]);
+		Promise.all(promises)
+			.then(results => {
+				const totalUsers = results[0].reduce((prev, userCount) => prev + userCount, 0);
+				const totalGuilds = results[1].reduce((prev, guildCount) => prev + guildCount, 0);
+
+				activitiesList = [
+					`on ${totalGuilds.toLocaleString()} islands`,
+					`AC:NH with ${totalUsers.toLocaleString()} users`,
+					`with the developer's console`,
+					`with the ;help command`,
+					'AC:NH with PnKllr',
+				];
+				index = Math.floor(Math.random() * activitiesList.length);
+
+				// Setting activity
+				client.user.setActivity(activitiesList[index]);
+			})
+			.catch((e) =>
+				console.log(`[Shard ${client.guilds.cache.first().shardID}] ${e}`)
+			);
 	}, 30000);
 }

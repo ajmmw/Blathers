@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> please supply the Fish Name.`);
   }
   value = args.slice(0).join(' ');
-  if (value.length < 4) return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide a longer name to search.`);
+  if (value.length < 3) return client.error(message.channel, 'ERROR', `<@${message.author.id}> please provide a longer name to search.`);
   Fish = client.getFish.get(value);
   if (!Fish) {
     Fish = DataSQL.prepare("SELECT * FROM fish WHERE name LIKE ? ORDER BY name ASC").all(`%${value}%`);
@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
     .addField(`Available (Northern Hemisphere)`, `${Fish.nh}`, false)
     .addField(`Available (Southern Hemisphere)`, `${Fish.sh}`, false)
     .setThumbnail(Fish.image)
-    .setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
+    .setFooter(`Info from Fandom WIKI | ${client.prefix}invite to add Blathers to your server`, null)
     .setColor(client.getRandomColor());
   return message.channel.send(embed);
 

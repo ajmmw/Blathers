@@ -36,6 +36,7 @@ exports.run = (client, message, args) => {
 				.addField(`Sign`, data.sign, true)
 				.addField(`Phrase`, data.phrase, true)
 				.setThumbnail(data.portrait)
+				.setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
 				.setColor(client.getRandomColor());
 			message.channel.send(embed);
 		}

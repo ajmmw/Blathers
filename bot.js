@@ -53,7 +53,6 @@ fs.readdir('./commands/', (err, folders) => {
 
 				const props = require(`./commands/${folders[i]}/${file}`);
 				const commandName = props.help.name;
-				console.log(`Attempting to load command ${commandName}`);
 				client.commands.set(commandName, props);
 
 				if (props.conf.aliases) {
