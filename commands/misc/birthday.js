@@ -28,13 +28,14 @@ exports.run = (client, message, args) => {
 		const bdays = DataSQL.prepare("SELECT * FROM villager WHERE birthday = ?;").all(`${month} ${date}${nth(date)}`);
 		for (const data of bdays) {
 			embed = new Discord.MessageEmbed()
-				.setAuthor(`${data.name}`, null)
+				.setAuthor(`${data.name}`, data.icon)
 				.addField(`Gender`, data.gender, true)
 				.addField(`Personality`, data.personality, true)
 				.addField(`Species`, data.species, true)
 				.addField(`Birthday`, data.birthday, true)
 				.addField(`Sign`, data.sign, true)
 				.addField(`Phrase`, data.phrase, true)
+				.addField(`Saying`, data.saying, false)
 				.setThumbnail(data.portrait)
 				.setFooter(`Info from Fandom WIKI | ;invite to add Blathers to your server`, null)
 				.setColor(client.getRandomColor());

@@ -141,6 +141,15 @@ exports.run = (client, message, args) => {
 					.setColor(client.getRandomColor())
 					.setDescription(output)
 				if (UserIS.hemisphere != null) { embed.setThumbnail(`https://pnkllr.net/projects/Blathers/${UserIS.hemisphere}.png`) };
+				if (UserIS.turnip_price != null) {
+					today = new Date();
+					posted = new Date(UserIS.dodo_time);
+
+					if ((today.getTime() - posted.getTime()) < 3600000) {
+						embed.addField(`Turnip Price`, `${UserIS.turnip_price} ${client.emoji.bells}`, true);
+						embed.addField(`DODO Code`, `${UserIS.dodo_code}`, true);
+					}
+				}
 				return message.channel.send(embed);
 			}
 			return client.error(message.channel, 'ERROR', `Could not find a member by that name!`);

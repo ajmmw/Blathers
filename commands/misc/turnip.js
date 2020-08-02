@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> turnip price is either below the min sell price, or above the max.\nDon't be a hacker.`);
   }
 
-  const blocked = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '[', '{', ']', '}', '\\', '|', ';', ':', '\'', '"', ',', '<', '.', '>', '/', '?', 'I', 'O', 'Z',];
+  const blocked = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '[', '{', ']', '}', '\\', '|', ';', ':', '\'', '"', ',', '<', '.', '>', '/', '?', 'I', 'O', 'Z'];
   if (args[1].length != 5 || blocked.indexOf(args[1].toUpperCase()) != -1) {
     return client.error(message.channel, 'ERROR', `<@${message.author.id}> invalid DODO code.\nPlease check again.`);
   }

@@ -1,0 +1,13 @@
+{
+  "system": {
+    "mention_bot": "Hey there! My prefix is `$1`. Use the `$1help` command to find out more about me!"
+  },
+  "commands": {
+    "fun": {},
+    "info": {},
+    "misc": {},
+    "moderation": {},
+    "music": {},
+    "system": {}
+  }
+}

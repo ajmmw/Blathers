@@ -90,7 +90,7 @@ module.exports = async (client, message) => {
 					timeLeft = (expirationTime - now) / 60000;
 					time = 'minute(s)';
 				}
-				const warns = [`Woah There Bucko!`, `I'm Not Ready For This Speed!`, `To Fast!`, `Ok Sonic`, 'VROOOM!',];
+				const warns = [`Woah There Bucko!`, `I'm Not Ready For This Speed!`, `Too Fast!`, `Ok Sonic`, 'VROOOM!',];
 				const index = Math.floor(Math.random() * warns.length);
 				return client.warn(
 					message.channel, warns[index], `Please wait **${timeLeft.toFixed(2)} more ${time}** before reusing the \`${cmd.help.name}\` command!`);

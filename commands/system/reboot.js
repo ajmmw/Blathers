@@ -2,7 +2,7 @@ module.exports.run = async (client, message, args) => {
 	//Force stops the node process, Systemctl then starts it back up.
 	await message.channel.send('Rebooting bot! Please allow at least 10 seconds for the bot to fully reboot!');
 	console.log('Bot rebooting...');
-	process.exit(0);
+	client.shard.broadcastEval('process.exit()');
 };
 
 module.exports.conf = {

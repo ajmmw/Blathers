@@ -16,11 +16,10 @@ global.DataSQL = new SQLite('./database.sqlite');
 
 // Load DBL API
 const DBL = require('dblapi.js');
-const dbl = new DBL(config.dbl.token, { webhookPort: 5000, webhookAuth: config.dbl.auth }, client);
+const dbl = new DBL(config.dbl.token, client);
 
 // Get Functions
-const emoji = require('./src/emoji');
-client.emoji = emoji;
+client.emoji = require('./src/emoji');
 require('./src/functions')(client);
 
 // Commands Load

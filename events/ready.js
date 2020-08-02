@@ -38,6 +38,7 @@ module.exports = (client) => {
 
 	// Lookup
 	client.getFish = DataSQL.prepare("SELECT * FROM fish WHERE name LIKE ?");
+	client.getSea = DataSQL.prepare("SELECT * FROM sea WHERE name LIKE ?");
 	client.getBug = DataSQL.prepare("SELECT * FROM bug WHERE name LIKE ?");
 	client.getFossil = DataSQL.prepare("SELECT * FROM fossil WHERE name LIKE ?");
 	client.getVillager = DataSQL.prepare("SELECT * FROM villager WHERE name LIKE ?");
